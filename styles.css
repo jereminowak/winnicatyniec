@@ -1,0 +1,94 @@
+body
+{
+font-family: 'Jost';
+margin: 0;
+padding: 0;
+background-color: #F5F5F5;
+cursor: default;
+}
+
+/* Winnica Tyniec 01 1 */
+
+.winnica-tyniec
+{
+position: absolute;
+width: 450px;
+height: 667px;
+left: 0;
+right: 0;
+margin: auto;
+top: 42px;
+}
+
+/* STRONA W BUDOWIE */
+
+.strona-w-budowie
+{
+position: absolute;
+width: 294px;
+height: 43px;
+left: 0;
+right: 0;
+margin: auto;
+top: 709px;
+
+font-family: 'Jost';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 43px;
+
+color: #000000;
+}
+
+/* Znajdź nas w social mediach */
+
+.znajdz-nas
+{
+position: absolute;
+width: /*354px*/ 100%;
+text-align: center;
+height: 43px;
+left: 0;
+right: 0;
+margin: auto;
+top: 811px;
+
+font-family: 'Jost';
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 43px;
+
+color: #000000;
+}
+
+/* Socials */
+
+.socials
+{
+position: absolute;
+width: 115px;
+height: 45px;
+left: 0;
+right: 0;
+margin: auto;
+top: 884px;
+padding-bottom: 45px;
+}
+
+/* facebook */
+
+.facebook
+{
+position: absolute;
+right: 0;
+}
+
+/* instagram */
+
+.instagram
+{
+position: absolute;
+left: 0;
+}
