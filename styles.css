@@ -13,23 +13,28 @@ body, html {
   height: 100%;
   font-family: "Jost";
   color: #F4F4F4;
+  
+}
+
+html{
+	scroll-behavior: smooth;
 }
 
 #top-nav{
-  position: absolute;
-  top: 0px;
+  position: fixed;
+  top: 32px;
   left: 0;
   width: 100%;
   z-index: 1000;
   height: 64px;
   text-align: right;
   background-color: transparent;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, top 1s ease, background-color 1s ease;
   
 }
 
 #top-nav.out{
-	transition: color 0.3s ease;
+	transition: color 0.3s ease, top 0.3s ease, background-color 0.3s ease;
 }
 
 #top-nav.out a{
@@ -40,7 +45,8 @@ body, html {
 #top-nav.fixed{
 	position: fixed;
 	top: 0;
-	transition: color 0.3s ease;
+	background-color: #6E2020;
+	transition: color 0.3s ease, top 1s ease, background-color 1s ease;
 }
 
 #top-nav.fixed a{
