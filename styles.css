@@ -29,7 +29,7 @@ html{
   height: 64px;
   text-align: right;
   background-color: transparent;
-  transition: color 0.3s ease, top 1s ease, background-color 1s ease;
+  transition: color 1s ease, top 1s ease, background-color 1s ease;
   
 }
 
@@ -46,11 +46,11 @@ html{
 	position: fixed;
 	top: 0;
 	background-color: #6E2020;
-	transition: color 0.3s ease, top 1s ease, background-color 1s ease;
+	transition: color 1s ease, top 1s ease, background-color 1s ease;
 }
 
 #top-nav.fixed a{
-	color: black;
+	color: white;
 	transition: color 0.3s ease;
 }
 
