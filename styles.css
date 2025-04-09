@@ -1,94 +1,242 @@
-body
-{
-font-family: 'Jost';
-margin: 0;
-padding: 0;
-background-color: #F5F5F5;
-cursor: default;
+* {
+  box-sizing: border-box;
 }
 
-/* Winnica Tyniec 01 1 */
-
-.winnica-tyniec
-{
-position: absolute;
-width: 450px;
-height: 667px;
-left: 0;
-right: 0;
-margin: auto;
-top: 42px;
+*:focus {
+  box-shadow: none;
 }
 
-/* STRONA W BUDOWIE */
+body, html {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  height: 100%;
+  font-family: "Jost";
+  color: #F4F4F4;
+}
 
-.strona-w-budowie
-{
-position: absolute;
-width: 294px;
-height: 43px;
-left: 0;
-right: 0;
-margin: auto;
-top: 709px;
+#top-nav{
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 64px;
+  text-align: right;
+  background-color: transparent;
+  transition: color 0.3s ease;
+  
+}
 
-font-family: 'Jost';
-font-style: normal;
-font-weight: 400;
-font-size: 30px;
-line-height: 43px;
+#top-nav.out{
+	transition: color 0.3s ease;
+}
 
+#top-nav.out a{
+	color: transparent;
+	transition: color 0.3s ease;
+}
+
+#top-nav.fixed{
+	position: fixed;
+	top: 0;
+	transition: color 0.3s ease;
+}
+
+#top-nav.fixed a{
+	color: black;
+	transition: color 0.3s ease;
+}
+
+.scrolled{
+	background-color: yellow;
+}
+
+.refs{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 20px;
+	margin-right: 15px;
+}
+
+p{
+	color: #3B3B3B;
+}
+
+a {
+  color: #6E2020;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease, font-size 0.3s ease;
+} 
+
+a:hover {
+  color: #3B3B3B;
+  font-size: 21px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-splash {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0%;
+  height: 100%;
+  background-image: url('https://i.postimg.cc/XNDWFj9z/pexels-math-21393.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center 75%;
+  cursor: default;
+}
+
+.top-nav {
+  margin: 32px;
+  height:112px;
+  top: 32px;
+  text-align: right;
+}
+
+#top-nav a {
+margin: 4px;
 color: #000000;
 }
 
-/* Znajdź nas w social mediach */
-
-.znajdz-nas
-{
-position: absolute;
-width: /*354px*/ 100%;
-text-align: center;
-height: 43px;
-left: 0;
-right: 0;
-margin: auto;
-top: 811px;
-
-font-family: 'Jost';
-font-style: normal;
-font-weight: 300;
-font-size: 30px;
-line-height: 43px;
-
-color: #000000;
+#top-nav a:hover {
+  color: #6E2020;
 }
 
-/* Socials */
-
-.socials
-{
-position: absolute;
-width: 115px;
-height: 45px;
-left: 0;
-right: 0;
-margin: auto;
-top: 884px;
-padding-bottom: 45px;
+#top-nav a.active {;
+  font-weight: 500;
 }
 
-/* facebook */
-
-.facebook
-{
-position: absolute;
-right: 0;
+#top-nav img{
+  width: 40px;
+  position: absolute;
+  left: 32px;
+  top: 32px; 
 }
 
-/* instagram */
+.page-intro {
+  margin: 32px;
+  margin-top: 258px;
+  text-align: left;
+}
 
-.instagram
-{
-position: absolute;
-left: 0;
+.main-title {
+  margin: 0px;
+  font-family: "Cormorant";
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 88px;
+  color: #F8F8F8;
+}
+
+.main-subtitle {
+  margin: 0px 0 128px 0;
+  font-family: "Cormorant";
+  font-weight: bold;
+  font-size: 32px;
+  line-height:40px;
+  color: #F8F8F8;
+}
+
+.section-title {
+  font-family: "Cormorant";
+  font-weight: bold;
+  font-size: 56px;
+  line-height:64px;
+  color: #6E2020;
+}
+
+.section-body {
+  font-size: 20px;
+  line-height:28px;
+}
+
+.btn {
+  padding: 16px 24px 16px 24px;
+  font-size: 16px;
+  background-color: #6E2020;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.btn:hover {
+  background-color: darken(#6E2020, 3%);
+  color: #ffffff;  
+}
+
+.link-btn {
+  padding: 0px;
+  font-size: 20px;
+  line-height: 44px;
+  color: #6E2020;
+  border-radius: 12px;
+  text-align: right;
+}
+
+.link-btn:hover {
+  color: darken(#6E2020, 3%);
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px 16px;
+  position: relative;
+}
+
+.carousel .element {
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  position: relative;
+}
+
+.calousel .image {
+  position: relative;
+  width: 60px;
+  height: 240px;
+}
+
+.carousel .label {
+  position: relative;
+  width: fit-content;
+  font-family: "Cormorant";
+  font-weight: bold;
+  color: #000000;
+  font-size: 26px;
+  line-height: 36px;
+  top: 8px;
+}
+
+.carousel .text {
+  position: relative;
+  width: fit-content;
+  font-weight: 300;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  line-height: 24px;
+  top: 4px;
 }
