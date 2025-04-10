@@ -3,11 +3,11 @@ RewriteEngine On
 # Przepisanie na ladny adres z qr
 RewriteRule ^q/FFFF(\d+)$ /QR/QR_$1.html
 
-RewriteCond %{HTTP_REFERER} !^https?://(www\.)?winnicatyniec\.pl/ [NC]
-RewriteCond %{REQUEST_METHOD} GET
-RewriteCond %{REQUEST_URI} !^/$ [NC]      # Wyj¹tek: strona g³ówna
+#RewriteCond %{HTTP_REFERER} !^https?://(www\.)?winnicatyniec\.pl/ [NC]
+#RewriteCond %{REQUEST_METHOD} GET
+#RewriteCond %{REQUEST_URI} !^/$ [NC]      # Wyj¹tek: strona g³ówna
 #RewriteCond %{REQUEST_URI} !^/q(.*)?$ [NC]   # Wyj¹tek: œcie¿ka /q
-RewriteRule ^(.*)$ / [R=302,L]
+#RewriteRule ^(.*)$ / [R=302,L]
 
 # Przekierowanie na stronê g³ówn¹, jeœli œcie¿ka nie jest "/" lub "/q"
 #RewriteCond %{REQUEST_URI} !^/$ [NC]      # Wyj¹tek: strona g³ówna
