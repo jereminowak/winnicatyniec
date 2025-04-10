@@ -1,3 +1,6 @@
+/*color-primary: #780A28;
+color-secondary: #25390B;*/
+
 * {
   box-sizing: border-box;
 }
@@ -45,13 +48,16 @@ html{
 #top-nav.fixed{
 	position: fixed;
 	top: 0;
-	background-color: #6E2020;
+	background-color: #EAE0E3;
 	transition: color 1s ease, top 1s ease, background-color 1s ease;
 }
 
 #top-nav.fixed a{
-	color: white;
 	transition: color 0.3s ease;
+}
+
+#top-nav.fixed a:hover{
+	color:#6E2020;
 }
 
 .scrolled{
@@ -102,8 +108,8 @@ section {
   display: flex;
   flex-direction: column;
   padding: 16px 0%;
-  height: 100%;
-  background-image: url('https://i.postimg.cc/XNDWFj9z/pexels-math-21393.jpg');
+  height: 90%;
+  background-image: url("bg.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center 75%;
@@ -118,12 +124,15 @@ section {
 }
 
 #top-nav a {
-margin: 4px;
-color: #000000;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 4px;
+  color: #000000;
 }
 
 #top-nav a:hover {
-  color: #6E2020;
+  font-size: 17px;
+  color: white;
 }
 
 #top-nav a.active {;
@@ -131,10 +140,10 @@ color: #000000;
 }
 
 #top-nav img{
-  width: 40px;
+  width: 120px;
   position: absolute;
   left: 32px;
-  top: 32px; 
+  top: 0px; 
 }
 
 .page-intro {
@@ -154,8 +163,8 @@ color: #000000;
 
 .main-subtitle {
   margin: 0px 0 128px 0;
-  font-family: "Cormorant";
-  font-weight: bold;
+  font-family: "Jost";
+  font-weight: 400;
   font-size: 32px;
   line-height:40px;
   color: #F8F8F8;
@@ -172,6 +181,22 @@ color: #000000;
 .section-body {
   font-size: 20px;
   line-height:28px;
+}
+
+.statement {
+  background-image: url("mgliste.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 240px;
+}
+
+.ornament {
+  font-size: 48px;
+  text-align: center;
+  color:#ffffff;
+  font-family: "Cormorant";
 }
 
 .btn {
