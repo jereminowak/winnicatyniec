@@ -60,6 +60,19 @@ html{
 	color:#6E2020;
 }
 
+#top-nav .icon {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+
 .scrolled{
 	background-color: yellow;
 }
@@ -192,8 +205,9 @@ section {
   height: 240px;
 }
 
-.ornament {
+.statement .ornament {
   font-size: 48px;
+  font-weight: 500;
   text-align: center;
   color:#ffffff;
   font-family: "Cormorant";
@@ -242,9 +256,16 @@ section {
   justify-content: center;
   gap: 4px;
   position: relative;
+  padding: 8px 4px;
+  border-radius: 8px;
 }
 
-.calousel .image {
+.carousel .element:hover {
+  box-shadow: 4px 4px 40px 12px #EAE0E3;
+  background-color: #ffffff;
+}
+
+.carousel .image {
   position: relative;
   width: 60px;
   height: 240px;
@@ -258,6 +279,7 @@ section {
   color: #000000;
   font-size: 26px;
   line-height: 36px;
+  text-align: center;
   top: 8px;
 }
 
@@ -266,7 +288,7 @@ section {
   width: fit-content;
   font-weight: 300;
   color: #000000;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   line-height: 24px;
   top: 4px;
