@@ -14,7 +14,7 @@ body, html {
   line-height: 22px;
   margin: 0;
   height: 100%;
-  font-family: "Jost";
+  font-family: "Inter";
   color: #F4F4F4;
   
 }
@@ -59,19 +59,6 @@ html{
 #top-nav.fixed a:hover{
 	color:#6E2020;
 }
-
-#top-nav .icon {
-  display: block;
-}
-
-@media (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
 
 .scrolled{
 	background-color: yellow;
@@ -167,8 +154,8 @@ section {
 
 .main-title {
   margin: 0px;
-  font-family: "Cormorant";
-  font-weight: bold;
+  font-family: "Newsreader";
+  font-weight: 400;
   font-size: 80px;
   line-height: 88px;
   color: #F8F8F8;
@@ -176,7 +163,7 @@ section {
 
 .main-subtitle {
   margin: 0px 0 128px 0;
-  font-family: "Jost";
+  font-family: "Inter";
   font-weight: 400;
   font-size: 32px;
   line-height:40px;
@@ -184,8 +171,8 @@ section {
 }
 
 .section-title {
-  font-family: "Cormorant";
-  font-weight: bold;
+  font-family: "Newsreader";
+  font-weight: 500;
   font-size: 56px;
   line-height:64px;
   color: #6E2020;
@@ -197,7 +184,7 @@ section {
 }
 
 .statement {
-  background-image: url("mgliste.png");
+  background-image: url("korki.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -210,7 +197,7 @@ section {
   font-weight: 500;
   text-align: center;
   color:#ffffff;
-  font-family: "Cormorant";
+  font-family: "Newsreader";
 }
 
 .btn {
@@ -233,6 +220,7 @@ section {
   color: #6E2020;
   border-radius: 12px;
   text-align: right;
+  cursor: pointer;
 }
 
 .link-btn:hover {
@@ -260,10 +248,10 @@ section {
   border-radius: 8px;
 }
 
-.carousel .element:hover {
+/*.carousel .element:hover {
   box-shadow: 4px 4px 40px 12px #EAE0E3;
   background-color: #ffffff;
-}
+}*/
 
 .carousel .image {
   position: relative;
@@ -274,8 +262,8 @@ section {
 .carousel .label {
   position: relative;
   width: fit-content;
-  font-family: "Cormorant";
-  font-weight: bold;
+  font-family: "Newsreader";
+  font-weight: medium;
   color: #000000;
   font-size: 26px;
   line-height: 36px;
@@ -292,4 +280,19 @@ section {
   text-align: center;
   line-height: 24px;
   top: 4px;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between; /* Rozstawia elementy na przeciwległe końce */
+  align-items: center;            /* Wyrównuje je pionowo na środku */
+  padding: 1rem 0;                /* Opcjonalne odstępy */
+}
+
+.btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover .btn-icon {
+  transform: translateX(4px);
 }
