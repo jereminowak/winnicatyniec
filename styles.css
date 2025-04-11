@@ -36,15 +36,6 @@ html{
   
 }
 
-#top-nav.out{
-	transition: color 0.3s ease, top 0.3s ease, background-color 0.3s ease;
-}
-
-#top-nav.out a{
-	color: transparent;
-	transition: color 0.3s ease;
-}
-
 #top-nav.fixed{
 	position: fixed;
 	top: 0;
@@ -53,11 +44,12 @@ html{
 }
 
 #top-nav.fixed a{
-	transition: color 0.3s ease;
+	transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 #top-nav.fixed a:hover{
 	color:#6E2020;
+  font-size: 17px;
 }
 
 .scrolled{
@@ -116,13 +108,6 @@ section {
   cursor: default;
 }
 
-.top-nav {
-  margin: 32px;
-  height:112px;
-  top: 32px;
-  text-align: right;
-}
-
 #top-nav a {
   font-size: 16px;
   text-transform: uppercase;
@@ -135,7 +120,7 @@ section {
   color: white;
 }
 
-#top-nav a.active {;
+#top-nav a.active {
   font-weight: 500;
 }
 
@@ -176,6 +161,7 @@ section {
   font-size: 56px;
   line-height:64px;
   color: #6E2020;
+  cursor: default;
 }
 
 .section-body {
