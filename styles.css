@@ -200,6 +200,10 @@ section {
 }
 
 .link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
   padding: 0px;
   font-size: 20px;
   line-height: 44px;
@@ -276,9 +280,15 @@ section {
 }
 
 .btn-icon {
-  transition: transform 0.3s ease;
+  width: 16px;
+  height: 16px;
+  background-image: url("arrow-left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: transform 0.2s ease;
 }
 
-.btn:hover .btn-icon {
+.link-btn:hover .btn-icon {
   transform: translateX(4px);
 }
