@@ -40,6 +40,31 @@ html{
 	scroll-behavior: smooth;
 }
 
+#backToTop {
+  position: fixed;
+  bottom: -60px;
+  right: 30px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: bottom 0.5s ease;
+}
+
+#backToTop.seen{
+  bottom: 30px;
+  transition: bottom 0.5s ease;
+} 
+
+#backToTop:hover {
+  background-color: #555;
+}
+
 #top-nav{
   position: fixed;
   top: 32px;
@@ -92,7 +117,7 @@ a {
   transition: color 0.3s ease, font-size 0.3s ease;
 } 
 
-a:hover {
+#about a:hover {
   color: #3B3B3B;
   font-size: 21px;
 }
@@ -106,10 +131,75 @@ section {
   padding: 40px 0;
 }
 
+
+
 .container {
-  max-width: 1200px;
+  max-width: 100%;/*1200px;*/
   margin: 0 auto;
-  padding: 0 20px;
+  position: relative;
+  /* padding: 0 20px; */
+}
+
+#about .container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.wincyj{
+  position: relative;
+  width: 100%;
+  height: 24px;
+}
+
+#about .wincyj a{
+  position: absolute;
+  right: 0;
+}
+
+#wina .section-head{
+  display: flex;
+  flex-direction: column;
+}
+
+#wina .section-title{
+  margin: 0 auto;
+}
+
+#wina .section-title2{
+  margin: 0;
+}
+
+#wina .wincyj{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13%;
+  margin: 20px auto;
+  height: 50px;
+  border: 2px solid red;
+}
+
+#wina .wincyj a{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  
+}
+
+#wina .wincyj a div{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* poziomo */
+  align-items: center;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+#wina .wincyj a div:hover{
+  background-color: red;
+  color: white;
 }
 
 .main-splash {
@@ -174,6 +264,7 @@ section {
   font-weight: 500;
   color: #6E2020;
   cursor: default;
+  margin: 0;
 }
 
 .statement {
@@ -225,16 +316,29 @@ section {
   color: darken(#6E2020, 3%);
 }
 
+.section-logo{
+  width: 30%;
+  height: 100%;
+}
+
+.section-text{
+  width: 70%;
+  height: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 .carousel {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px 16px;
+  /* align-items: flex-start; */
+  /* justify-content: space-between; */
+  /* gap: 16px 16px; */
   position: relative;
+  height: 1100px;
 }
 
-.carousel .element {
+/* .carousel .element {
   display: flex;
   flex-direction: column;
   width: 18%;
@@ -244,12 +348,70 @@ section {
   position: relative;
   padding: 8px 4px;
   border-radius: 8px;
-}
+} */
 
 /*.carousel .element:hover {
   box-shadow: 4px 4px 40px 12px #EAE0E3;
   background-color: #ffffff;
 }*/
+
+.flip-wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  /* gap: 4px; */
+  position: relative;
+  /* padding: 8px 4px; */
+  border-radius: 8px;
+
+  /* width: 200px; */
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  /* perspective: 1000px; efekt 3D */
+}
+
+.flip-card {
+  width: 100%;
+  
+
+  /* width: 200px; */
+  height: 100%;
+  /* perspective: 1000px; */
+  overflow: hidden;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-wrapper:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  /* pointer-events: none; */
+}
+
+.flip-card-front {
+  background-color: #eee;
+}
+
+.flip-card-back {
+  background-color: #ddd;
+  transform: rotateY(180deg);
+}
 
 .carousel .image {
   position: relative;
