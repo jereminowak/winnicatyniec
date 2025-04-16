@@ -10,17 +10,59 @@ color-secondary: #25390B;*/
 }
 
 body, html {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 22px;
   margin: 0;
   height: 100%;
-  font-family: "Jost";
-  color: #F4F4F4;
-  
+  font-family: "Inter";
+}
+
+h1{
+  font-size: 80px;
+  line-height: 82px;
+}
+
+h2{
+  font-size: 56px;
+  line-height: 60px;
+}
+
+h3{
+  font-size: 40px;
+  line-height: 44px;
+}
+
+ul{
+  color:#000000;
 }
 
 html{
 	scroll-behavior: smooth;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: -60px;
+  right: 30px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: bottom 0.5s ease;
+}
+
+#backToTop.seen{
+  bottom: 30px;
+  transition: bottom 0.5s ease;
+} 
+
+#backToTop:hover {
+  background-color: #555;
 }
 
 #top-nav{
@@ -36,15 +78,6 @@ html{
   
 }
 
-#top-nav.out{
-	transition: color 0.3s ease, top 0.3s ease, background-color 0.3s ease;
-}
-
-#top-nav.out a{
-	color: transparent;
-	transition: color 0.3s ease;
-}
-
 #top-nav.fixed{
 	position: fixed;
 	top: 0;
@@ -53,11 +86,12 @@ html{
 }
 
 #top-nav.fixed a{
-	transition: color 0.3s ease;
+	transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 #top-nav.fixed a:hover{
 	color:#6E2020;
+  font-size: 17px;
 }
 
 .scrolled{
@@ -83,7 +117,7 @@ a {
   transition: color 0.3s ease, font-size 0.3s ease;
 } 
 
-a:hover {
+#about a:hover {
   color: #3B3B3B;
   font-size: 21px;
 }
@@ -97,30 +131,88 @@ section {
   padding: 40px 0;
 }
 
+
+
 .container {
-  max-width: 1200px;
+  max-width: 100%;/*1200px;*/
   margin: 0 auto;
-  padding: 0 20px;
+  position: relative;
+  /* padding: 0 20px; */
+}
+
+#about .container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.wincyj{
+  position: relative;
+  width: 100%;
+  height: 24px;
+}
+
+#about .wincyj a{
+  position: absolute;
+  right: 0;
+}
+
+#wina .section-head{
+  display: flex;
+  flex-direction: column;
+}
+
+#wina .section-title{
+  margin: 0 auto;
+}
+
+#wina .section-title2{
+  margin: 0;
+}
+
+#wina .wincyj{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13%;
+  margin: 20px auto;
+  height: 50px;
+  border: 2px solid red;
+}
+
+#wina .wincyj a{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  
+}
+
+#wina .wincyj a div{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* poziomo */
+  align-items: center;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+#wina .wincyj a div:hover{
+  background-color: red;
+  color: white;
 }
 
 .main-splash {
-  position: relative;
-  display: flex;
+  position:relative;
+  display:flex;
   flex-direction: column;
-  padding: 16px 0%;
-  height: 90%;
+  height: 100%;
   background-image: url("bg.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center 75%;
+  background-size: 80% cover;
+  background-position: top;
   cursor: default;
-}
-
-.top-nav {
-  margin: 32px;
-  height:112px;
-  top: 32px;
-  text-align: right;
+  padding: 40px;
 }
 
 #top-nav a {
@@ -135,7 +227,7 @@ section {
   color: white;
 }
 
-#top-nav a.active {;
+#top-nav a.active {
   font-weight: 500;
 }
 
@@ -147,44 +239,36 @@ section {
 }
 
 .page-intro {
-  margin: 32px;
   margin-top: 258px;
   text-align: left;
 }
 
 .main-title {
   margin: 0px;
-  font-family: "Cormorant";
-  font-weight: bold;
-  font-size: 80px;
-  line-height: 88px;
+  font-family: "Newsreader";
+  font-weight: 400;
   color: #F8F8F8;
 }
 
 .main-subtitle {
   margin: 0px 0 128px 0;
-  font-family: "Jost";
+  font-family: "Inter";
   font-weight: 400;
   font-size: 32px;
-  line-height:40px;
+  line-height: 40px;
   color: #F8F8F8;
 }
 
 .section-title {
-  font-family: "Cormorant";
-  font-weight: bold;
-  font-size: 56px;
-  line-height:64px;
+  font-family: "Newsreader";
+  font-weight: 500;
   color: #6E2020;
-}
-
-.section-body {
-  font-size: 20px;
-  line-height:28px;
+  cursor: default;
+  margin: 0;
 }
 
 .statement {
-  background-image: url("mgliste.png");
+  background-image: url("korki.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -192,11 +276,12 @@ section {
   height: 240px;
 }
 
-.ornament {
+.statement .ornament {
   font-size: 48px;
+  font-weight: 500;
   text-align: center;
   color:#ffffff;
-  font-family: "Cormorant";
+  font-family: "Newsreader";
 }
 
 .btn {
@@ -205,6 +290,7 @@ section {
   background-color: #6E2020;
   color: #ffffff;
   border-radius: 12px;
+  margin-top: 20px;
 }
 
 .btn:hover {
@@ -213,28 +299,46 @@ section {
 }
 
 .link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
   padding: 0px;
   font-size: 20px;
   line-height: 44px;
   color: #6E2020;
   border-radius: 12px;
   text-align: right;
+  cursor: pointer;
 }
 
 .link-btn:hover {
   color: darken(#6E2020, 3%);
 }
 
+.section-logo{
+  width: 30%;
+  height: 100%;
+}
+
+.section-text{
+  width: 70%;
+  height: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 .carousel {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px 16px;
+  /* align-items: flex-start; */
+  /* justify-content: space-between; */
+  /* gap: 16px 16px; */
   position: relative;
+  height: 1100px;
 }
 
-.carousel .element {
+/* .carousel .element {
   display: flex;
   flex-direction: column;
   width: 18%;
@@ -242,9 +346,74 @@ section {
   justify-content: center;
   gap: 4px;
   position: relative;
+  padding: 8px 4px;
+  border-radius: 8px;
+} */
+
+/*.carousel .element:hover {
+  box-shadow: 4px 4px 40px 12px #EAE0E3;
+  background-color: #ffffff;
+}*/
+
+.flip-wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  /* gap: 4px; */
+  position: relative;
+  /* padding: 8px 4px; */
+  border-radius: 8px;
+
+  /* width: 200px; */
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  /* perspective: 1000px; efekt 3D */
 }
 
-.calousel .image {
+.flip-card {
+  width: 100%;
+  
+
+  /* width: 200px; */
+  height: 100%;
+  /* perspective: 1000px; */
+  overflow: hidden;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-wrapper:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  /* pointer-events: none; */
+}
+
+.flip-card-front {
+  background-color: #eee;
+}
+
+.flip-card-back {
+  background-color: #ddd;
+  transform: rotateY(180deg);
+}
+
+.carousel .image {
   position: relative;
   width: 60px;
   height: 240px;
@@ -253,11 +422,12 @@ section {
 .carousel .label {
   position: relative;
   width: fit-content;
-  font-family: "Cormorant";
-  font-weight: bold;
+  font-family: "Newsreader";
+  font-weight: medium;
   color: #000000;
   font-size: 26px;
   line-height: 36px;
+  text-align: center;
   top: 8px;
 }
 
@@ -266,8 +436,120 @@ section {
   width: fit-content;
   font-weight: 300;
   color: #000000;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   line-height: 24px;
   top: 4px;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between; /* Rozstawia elementy na przeciwległe końce */
+  align-items: center;            /* Wyrównuje je pionowo na środku */
+  padding: 1rem 0;                /* Opcjonalne odstępy */
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  background-image: url("arrow-left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.link-btn:hover .btn-icon {
+  transform: translateX(4px);
+}
+
+/* sekcja OFERTA */
+
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.section-content {
+  flex: 1;
+  max-width: 60%;
+}
+
+.section-content h3 {
+  margin-bottom: 16px;
+}
+
+.section-content p {
+  margin-bottom: 20px;
+}
+
+.section-content ul {
+  list-style-type: disc;
+  margin-bottom: 20px;
+}
+
+.section-content ul li {
+  margin-bottom: 8px;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 40%;
+  height: auto;
+  padding: 20px;
+  background-image: url("mgliste.png");
+}
+
+/* Responsywność */
+
+/*TABLET*/
+
+@media (max-width: 1060px) {
+  
+}
+
+/*MOBILE*/
+
+@media (max-width: 550px) {
+  body, html {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  h1{
+    font-size: 60px;
+    line-height: 66px;
+  }
+  
+  h2{
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  h3{
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .main-splash{
+  padding: 16px;
+  }
+
+  .main-subtitle {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .section-container {
+    flex-direction: column;
+    align-items: right;
+    gap: 8px;
+  }
+
+  .section-content, .image-container {
+    min-width: 100%;
+    min-height:260px;
+  }
 }
