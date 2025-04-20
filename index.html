@@ -4,6 +4,7 @@
 	
   <title>Winnica Tyniec</title>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css"/>
   <style>@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 		 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
@@ -14,18 +15,43 @@
  <body>
 
   <button id="backToTop">W gore</button>
+
+  <div id="mobile-nav" class="ukryty">
+	<div class="top">
+		<div class="logo">
+			<a href="#"><img src="logo_nav.svg"></a>
+		</div>
+		<div class="burger">
+			<button id="closeBtn"><img src="close.svg"></button>
+		</div>
+	</div>
+	<div class="bottom">
+		<div class="refs">
+			<a href="#about">O WINNICY</a>
+			<a href="#wina">WINO</a>
+			<a href="#features">OFERTA PLENEROWA</a>
+			<!-- <a href="#atrakcje">Atrakcje w okolicy</a>-->
+			<a href="#gallery">GALERIA</a>
+			<a href="#kontakt">KONTAKT</a>
+		</div>
+	</div>
+	
+  </div>
  
   <div id="top-nav">
 	<div class="logo">
-		<a href=index.html><img src="logo_nav.svg"></a>
+		<a href="#"><img src="logo_nav.svg"></a>
 	</div>
 	<div class="refs">
-			<a href="#winnica">O Winnicy</a>
+			<a href="#about">O Winnicy</a>
 			<a href="#wina">Wino</a>
-			<a href="#oferta">Oferta plenerowa</a>
+			<a href="#features">Oferta plenerowa</a>
 			<!-- <a href="#atrakcje">Atrakcje w okolicy</a>-->
-			<a href="#galeria">Galeria</a>
+			<a href="#gallery">Galeria</a>
 			<a href="#kontakt">Kontakt</a>
+	</div>
+	<div class="burger">
+		<button id="burgerBtn"><img src="burger.svg"></button>
 	</div>
   </div>
 	
@@ -243,7 +269,7 @@
 		
 	</section>
 
-	<section class="features" id="features">
+	<section class="features" id="kontakt">
 		<div class="container">
 		  <h2 class="section-title">Kontakt</h2>
 		</div>
