@@ -271,7 +271,23 @@
 
 	<section class="features" id="kontakt">
 		<div class="container">
-		  <h2 class="section-title">Kontakt</h2>
+			<div class="section-head">
+				<h2 class="section-title">Kontakt</h2>
+			</div>
+			<div class="section-data">
+				<div class="formularz">
+					<form action="send.php" method="POST">
+						<input type="text" name="name" placeholder="Imię i nazwisko" required><br>
+						<input type="email" name="email" placeholder="Adres e-mail" required><br>
+						<input type="tel" name="phone" placeholder="Numer telefonu"><br>
+						<textarea name="message" placeholder="Treść wiadomości" required></textarea><br>
+						<button type="submit">Wyślij</button>
+					</form>
+				</div>
+				<div class="mapa">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.540603689457!2d19.804999375729622!3d50.01996521826722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165fcf57d9fcab%3A0x994d56422bb9ac65!2sWinnica%20Tyniec!5e0!3m2!1spl!2spl!4v1745136586811!5m2!1spl!2spl" style="border:0; border-radius: 8px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
 		</div>
 		
 	</section>

@@ -24,13 +24,16 @@ const mobNav = document.getElementById("mobile-nav");
 const topNav = document.getElementById("top-nav");
 
 document.getElementById("burgerBtn").onclick = function(){
+  window.scrollTo({top: 0, behavior: 'smooth'});
   mobNav.classList.remove("ukryty");
   topNav.classList.add("ukryty");
+  document.body.classList.add("noscroll");
 };
 
 document.getElementById("closeBtn").onclick = function(){
   mobNav.classList.add("ukryty");
   topNav.classList.remove("ukryty");
+  document.body.classList.remove("noscroll");
 };
 
 btn.addEventListener('click', ()=>{
