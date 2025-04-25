@@ -4,6 +4,7 @@
 	
   <title>Winnica Tyniec</title>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css"/>
   <style>@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 		 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
@@ -14,18 +15,43 @@
  <body>
 
   <button id="backToTop">W gore</button>
+
+  <div id="mobile-nav" class="ukryty">
+	<div class="top">
+		<div class="logo">
+			<a href="#"><img src="logo_nav.svg"></a>
+		</div>
+		<div class="burger">
+			<button id="closeBtn"><img src="close.svg"></button>
+		</div>
+	</div>
+	<div class="bottom">
+		<div class="refs">
+			<a href="#about">O WINNICY</a>
+			<a href="#wina">WINO</a>
+			<a href="#features">OFERTA PLENEROWA</a>
+			<!-- <a href="#atrakcje">Atrakcje w okolicy</a>-->
+			<a href="#gallery">GALERIA</a>
+			<a href="#kontakt">KONTAKT</a>
+		</div>
+	</div>
+	
+  </div>
  
   <div id="top-nav">
 	<div class="logo">
-		<a href=index.html><img src="logo_nav.svg"></a>
+		<a href="#"><img src="logo_nav.svg"></a>
 	</div>
 	<div class="refs">
 			<a href="#about">O Winnicy</a>
 			<a href="#wina">Wino</a>
-			<a href="#oferta">Oferta plenerowa</a>
+			<a href="#features">Oferta plenerowa</a>
 			<!-- <a href="#atrakcje">Atrakcje w okolicy</a>-->
-			<a href="#galeria">Galeria</a>
+			<a href="#gallery">Galeria</a>
 			<a href="#kontakt">Kontakt</a>
+	</div>
+	<div class="burger">
+		<button id="burgerBtn"><img src="burger.svg"></button>
 	</div>
   </div>
 	
@@ -243,9 +269,25 @@
 		
 	</section>
 
-	<section class="kontakt" id="kontakt">
+	<section class="features" id="kontakt">
 		<div class="container">
-		  <h2 class="section-title">Kontakt</h2>
+			<div class="section-head">
+				<h2 class="section-title">Kontakt</h2>
+			</div>
+			<div class="section-data">
+				<div class="formularz">
+					<form action="send.php" method="POST">
+						<input type="text" name="name" placeholder="Imię i nazwisko" required><br>
+						<input type="email" name="email" placeholder="Adres e-mail" required><br>
+						<input type="tel" name="phone" placeholder="Numer telefonu"><br>
+						<textarea name="message" placeholder="Treść wiadomości" required></textarea><br>
+						<button type="submit">Wyślij</button>
+					</form>
+				</div>
+				<div class="mapa">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.540603689457!2d19.804999375729622!3d50.01996521826722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165fcf57d9fcab%3A0x994d56422bb9ac65!2sWinnica%20Tyniec!5e0!3m2!1spl!2spl!4v1745136586811!5m2!1spl!2spl" style="border:0; border-radius: 8px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
 		</div>
 		
 	</section>

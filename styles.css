@@ -75,7 +75,8 @@ html{
   text-align: right;
   background-color: transparent;
   transition: color 1s ease, top 1s ease, background-color 1s ease;
-  
+  display: flex;
+  flex-direction: row;
 }
 
 #top-nav.fixed{
@@ -94,11 +95,23 @@ html{
   font-size: 17px;
 }
 
+#top-nav .burger{
+  height: 100%;
+  width: 30px;
+  position: absolute;
+  right: 20px;
+  display: none;
+}
+
+#top-nav .burger img{
+  width: 100%;
+}
+
 .scrolled{
 	background-color: yellow;
 }
 
-.refs{
+#top-nav .refs{
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -116,6 +129,10 @@ a {
   font-size: 20px;
   transition: color 0.3s ease, font-size 0.3s ease;
 } 
+
+#about{
+  scroll-margin-top: 64px;
+}
 
 #about a:hover {
   color: #3B3B3B;
@@ -155,6 +172,10 @@ section {
 #about .wincyj a{
   position: absolute;
   right: 0;
+}
+
+#wina{
+  scroll-margin-top: 64px;
 }
 
 #wina .section-head{
@@ -202,6 +223,10 @@ section {
   color: white;
 }
 
+#features{
+  scroll-margin-top: 64px;
+}
+
 #features .section-head{
   display: flex;
   justify-content: space-between;
@@ -212,6 +237,10 @@ section {
 #features .container{
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+#gallery{
+  scroll-margin-top: 64px;
 }
 
 #gallery .section-head{
@@ -248,7 +277,74 @@ section {
   cursor: pointer;
 }
 
+#kontakt{
+  scroll-margin-top: 64px;
+}
 
+#kontakt .section-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+#kontakt .container{
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+#kontakt .section-data{
+  display: flex;
+  flex-direction: row;
+}
+
+#kontakt .formularz{
+  width: 45%;
+  margin-right: 5%;
+  position: relative;
+}
+
+#kontakt .mapa{
+  width: 50%;
+  position: relative;
+}
+
+#kontakt .mapa iframe{
+  width: 100%;
+  height: 450px;
+}
+
+#kontakt form{
+  display: flex;
+  flex-direction: column;
+}
+
+#kontakt form input{
+  border: 1px solid grey;
+  border-radius: 8px;
+  height: 55px;
+  padding-left: 10px;
+}
+
+#kontakt form textarea{
+  border: 1px solid grey;
+  border-radius: 8px;
+  height: 157px;
+  resize: none;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+#kontakt button{
+  background-color: #6E2020;
+  color: white;
+  width: 43%;
+  height: 45px;
+  position: absolute;
+  bottom: 0;
+  border-radius: 8px;
+  font-size: 17px;
+}
 
 .item {
   background-color: #ddd;
@@ -309,11 +405,15 @@ section {
   font-weight: 500;
 }
 
-#top-nav img{
+#top-nav .logo{
   width: 120px;
   position: absolute;
   left: 32px;
-  top: 0px; 
+  top: 0;
+}
+
+#top-nav .logo img{
+  width: 100%;
 }
 
 .page-intro {
@@ -654,13 +754,88 @@ footer .socials{
   margin-left: auto;
 }
 
+button{
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.ukryty{
+  display: none !important;
+}
+
+
+#mobile-nav{
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+}
+
+#mobile-nav .top{
+  margin-top: 32px;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+#mobile-nav .bottom{
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  margin-left: 26px;
+}
+
+#mobile-nav .logo{
+  width: 120px;
+  position: absolute;
+  left: 12px;
+  top: 0;
+}
+
+#mobile-nav .logo img{
+  width: 100%;
+}
+
+#mobile-nav .burger{
+  height: 100%;
+  width: 30px;
+  position: absolute;
+  right: 20px;
+  display: flex;
+}
+
+#mobile-nav .burger img{
+  width: 100%;
+}
+
+#mobile-nav .refs{
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+#mobile-nav .refs a{
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
 
 /* Responsywność */
 
 /*TABLET*/
 
 @media (max-width: 1060px) {
-  
+
 }
 
 /*MOBILE*/
@@ -704,5 +879,47 @@ footer .socials{
   .section-content, .image-container {
     min-width: 100%;
     min-height:260px;
+  }
+
+  #top-nav{
+    position: absolute;
+  }
+
+  #top-nav .refs{
+    display: none;
+  }
+
+  #top-nav .burger{
+    display: flex;
+  }
+
+  #top-nav .logo{
+    left: 12px;
+  }
+
+  #about .container .section-logo{
+    display: none;
+  }
+
+  #about .section-text{
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #about .wincyj a{
+    font-size: 16px;
+  }
+
+  #wina .flip-wrapper{
+    width: 100%;
+    height: 25%;
+  }
+
+  #wina .wincyj{
+    width: 45%;
+  }
+
+  #mobile-nav{
   }
 }
