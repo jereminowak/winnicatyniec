@@ -44,12 +44,12 @@ html{
   position: fixed;
   bottom: -60px;
   right: 30px;
-  padding: 10px 15px;
+  padding: 16px 16px;
   font-size: 16px;
   background-color: #333;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 16px;
   cursor: pointer;
   z-index: 999;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
@@ -91,7 +91,7 @@ html{
 }
 
 #top-nav.fixed a:hover{
-	color:#6E2020;
+	color:#780A28;
   font-size: 17px;
 }
 
@@ -101,6 +101,7 @@ html{
   position: absolute;
   right: 20px;
   display: none;
+  background-color: transparent;
 }
 
 #top-nav .burger img{
@@ -124,7 +125,7 @@ p{
 }
 
 a {
-  color: #6E2020;
+  color: #780A28;
   text-decoration: none;
   font-size: 20px;
   transition: color 0.3s ease, font-size 0.3s ease;
@@ -132,23 +133,18 @@ a {
 
 #about{
   scroll-margin-top: 64px;
+  height: auto;
 }
 
-#about a:hover {
-  color: #3B3B3B;
+a:hover {
   font-size: 21px;
+  color: darken(#780A28, 3%);
 }
 
 img {
   max-width: 100%;
-  height: auto;
+  display: flex;
 }
-
-section {
-  padding: 40px 0;
-}
-
-
 
 .container {
   max-width: 100%;/*1200px;*/
@@ -161,21 +157,30 @@ section {
   position: relative;
   display: flex;
   flex-direction: row;
+  height: auto;
 }
 
-.wincyj{
+.link-btn{
+  color: #6E2020;
+  cursor: pointer;
   position: relative;
   width: 100%;
   height: 24px;
 }
 
-#about .wincyj a{
+#about .link-btn a {
   position: absolute;
   right: 0;
 }
 
+#about .section-head{
+  margin: 0;
+}
+
 #wina{
   scroll-margin-top: 64px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 #wina .section-head{
@@ -188,50 +193,27 @@ section {
 }
 
 #wina .section-title2{
-  margin: 0;
+  margin: 8px auto 20px auto;
 }
 
-#wina .wincyj{
+#wina .button{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 13%;
+  width: 18%;
   margin: 20px auto;
-  height: 50px;
-  border: 2px solid red;
-}
-
-#wina .wincyj a{
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  
-}
-
-#wina .wincyj a div{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center; /* poziomo */
-  align-items: center;
-  transition: color 0.2s ease, background-color 0.2s ease;
-  cursor: pointer;
-}
-
-#wina .wincyj a div:hover{
-  background-color: red;
-  color: white;
 }
 
 #features{
   scroll-margin-top: 64px;
 }
 
-#features .section-head{
+.section-head{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  margin: 0 40px;
 }
 
 #features .container{
@@ -241,18 +223,8 @@ section {
 
 #gallery{
   scroll-margin-top: 64px;
-}
-
-#gallery .section-head{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-#gallery .container{
-  padding-left: 4rem;
-  padding-right: 4rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .gallery-container {
@@ -264,33 +236,17 @@ section {
   margin: 0 auto;
 }
 
-#gallery .wincyj{
-  position: relative;
-  width: 100%;
-  height: 24px;
-  margin-top: 28px;
-}
-
-#gallery .wincyj a{
-  position: absolute;
-  right: 0;
-  cursor: pointer;
+#gallery .button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18%;
+  margin: 20px auto;
 }
 
 #kontakt{
   scroll-margin-top: 64px;
-}
-
-#kontakt .section-head{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-#kontakt .container{
-  padding-left: 4rem;
-  padding-right: 4rem;
+  margin-bottom: 40px;
 }
 
 #kontakt .section-data{
@@ -302,6 +258,7 @@ section {
   width: 45%;
   margin-right: 5%;
   position: relative;
+  padding-left: 40px;
 }
 
 #kontakt .mapa{
@@ -321,14 +278,13 @@ section {
 
 #kontakt form input{
   border: 1px solid grey;
-  border-radius: 8px;
   height: 55px;
   padding-left: 10px;
 }
 
 #kontakt form textarea{
+  font-family: Inter;
   border: 1px solid grey;
-  border-radius: 8px;
   height: 157px;
   resize: none;
   padding-left: 10px;
@@ -336,19 +292,13 @@ section {
 }
 
 #kontakt button{
-  background-color: #6E2020;
-  color: white;
-  width: 43%;
-  height: 45px;
+  height: 44px;
   position: absolute;
   bottom: 0;
-  border-radius: 8px;
-  font-size: 17px;
 }
 
 .item {
   background-color: #ddd;
-  border-radius: 3px;
 }
 
 /* Style poszczególnych rozmiarów */
@@ -372,8 +322,6 @@ section {
   grid-column: span 3;
 }
 
-
-
 .main-splash {
   position:relative;
   display:flex;
@@ -381,13 +329,11 @@ section {
   height: 100%;
   background-image: url("bg.png");
   background-repeat: no-repeat;
-  background-size: 80% cover;
+  background-size: cover;
   background-position: top;
   cursor: default;
-  padding: 40px;
+  padding: 80px 40px;
 }
-
-
 
 #top-nav a {
   font-size: 16px;
@@ -439,10 +385,11 @@ section {
 
 .section-title {
   font-family: "Newsreader";
-  font-weight: 500;
-  color: #6E2020;
+  font-weight: 400;
+  color: #780A28;
   cursor: default;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .statement {
@@ -462,48 +409,35 @@ section {
   font-family: "Newsreader";
 }
 
-.btn {
-  padding: 16px 24px 16px 24px;
-  font-size: 16px;
-  background-color: #6E2020;
-  color: #ffffff;
-  border-radius: 12px;
-  margin-top: 20px;
-}
-
-.btn:hover {
-  background-color: darken(#6E2020, 3%);
-  color: #ffffff;  
-}
-
-.link-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  padding: 0px;
+.button {
+  padding: 16px 24px;
+  border: 2px solid currentColor;
   font-size: 20px;
-  line-height: 44px;
-  color: #6E2020;
-  border-radius: 12px;
-  text-align: right;
+  color: #780A28;
+  background-color: transparent;
+  text-align: center;
+    display: flex;
+    justify-content: center; /* poziomo */
+    align-items: center;
+    transition: color 0.2s ease, background-color 0.2s ease;
   cursor: pointer;
 }
 
-.link-btn:hover {
-  color: darken(#6E2020, 3%);
+.button:hover { 
+  background-color: #780A28; 
+  border: 2px solid #780A28;
+  color: white;
 }
 
 .section-logo{
-  width: 30%;
-  height: 100%;
+  width: 40%;
+  background-color: #780A28;
+  padding: 10%;
 }
 
 .section-text{
-  width: 70%;
-  height: 100%;
-  padding-left: 100px;
-  padding-right: 100px;
+  width: 60%;
+  padding: 40px;
 }
 
 .carousel {
@@ -515,23 +449,6 @@ section {
   position: relative;
   height: 1100px;
 }
-
-/* .carousel .element {
-  display: flex;
-  flex-direction: column;
-  width: 18%;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  position: relative;
-  padding: 8px 4px;
-  border-radius: 8px;
-} */
-
-/*.carousel .element:hover {
-  box-shadow: 4px 4px 40px 12px #EAE0E3;
-  background-color: #ffffff;
-}*/
 
 .flip-wrapper{
   display: flex;
@@ -553,8 +470,6 @@ section {
 
 .flip-card {
   width: 100%;
-  
-
   /* width: 200px; */
   height: 100%;
   /* perspective: 1000px; */
@@ -591,56 +506,6 @@ section {
   transform: rotateY(180deg);
 }
 
-.carousel .image {
-  position: relative;
-  width: 60px;
-  height: 240px;
-}
-
-.carousel .label {
-  position: relative;
-  width: fit-content;
-  font-family: "Newsreader";
-  font-weight: medium;
-  color: #000000;
-  font-size: 26px;
-  line-height: 36px;
-  text-align: center;
-  top: 8px;
-}
-
-.carousel .text {
-  position: relative;
-  width: fit-content;
-  font-weight: 300;
-  color: #000000;
-  font-size: 18px;
-  text-align: center;
-  line-height: 24px;
-  top: 4px;
-}
-
-.section-head {
-  display: flex;
-  justify-content: space-between; /* Rozstawia elementy na przeciwległe końce */
-  align-items: center;            /* Wyrównuje je pionowo na środku */
-  padding: 1rem 0;                /* Opcjonalne odstępy */
-}
-
-.btn-icon {
-  width: 16px;
-  height: 16px;
-  background-image: url("arrow-left.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: relative;
-  transition: transform 0.2s ease;
-}
-
-.link-btn:hover .btn-icon {
-  transform: translateX(4px);
-}
-
 /* sekcja OFERTA */
 
 .section-container {
@@ -649,7 +514,8 @@ section {
   flex-wrap: nowrap;
   justify-content: space-between;
   gap: 10px;
-  height: 1000px;
+  height: auto;
+  margin: 0 40px;
 }
 
 .section-content {
@@ -754,12 +620,6 @@ footer .socials{
   margin-left: auto;
 }
 
-button{
-  background: none;
-  border: none;
-  padding: 0;
-}
-
 .ukryty{
   display: none !important;
 }
@@ -768,7 +628,7 @@ button{
 #mobile-nav{
   height: 100%;
   width: 100%;
-  background-color: red;
+  background-color: #780A28;
   z-index: 10000;
   display: flex;
   flex-direction: column;
@@ -807,6 +667,7 @@ button{
   position: absolute;
   right: 20px;
   display: flex;
+  background-color: transparent;
 }
 
 #mobile-nav .burger img{
@@ -834,13 +695,7 @@ button{
 
 /*TABLET*/
 
-@media (max-width: 1060px) {
-
-}
-
-/*MOBILE*/
-
-@media (max-width: 550px) {
+@media (max-width: 900px) {
   body, html {
     font-size: 16px;
     line-height: 20px;
@@ -861,8 +716,55 @@ button{
     line-height: 36px;
   }
 
-  .main-splash{
-  padding: 16px;
+  a{
+    font-size: 16px;
+  }
+
+  a:hover{
+    font-size: 17px;
+  }
+
+  .button{
+    font-size: 16px;
+    padding: 12px;
+  }
+
+}
+
+/*MOBILE*/
+
+@media (max-width: 550px) {
+
+  body, html {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  h1{
+    font-size: 54px;
+    line-height: 60px;
+  }
+  
+  h2{
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  h3{
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  a{
+    font-size: 14px;
+  }
+
+  a:hover{
+    font-size: 15px;
+  }
+
+  .button{
+    font-size: 14px;
   }
 
   .main-subtitle {
@@ -878,7 +780,7 @@ button{
 
   .section-content, .image-container {
     min-width: 100%;
-    min-height:260px;
+    min-height: 100%;
   }
 
   #top-nav{
@@ -907,16 +809,12 @@ button{
     padding-right: 20px;
   }
 
-  #about .wincyj a{
-    font-size: 16px;
-  }
-
   #wina .flip-wrapper{
     width: 100%;
     height: 25%;
   }
 
-  #wina .wincyj{
+  #wina .button{
     width: 45%;
   }
 
