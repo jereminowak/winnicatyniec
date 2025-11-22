@@ -10,26 +10,27 @@ color-secondary: #25390B;*/
 }
 
 body, html {
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 150%;
   margin: 0;
   height: 100%;
   font-family: "Inter";
 }
 
 h1{
-  font-size: 80px;
-  line-height: 82px;
+  font-size: 64px;
+  line-height: 120%;
 }
 
 h2{
-  font-size: 56px;
-  line-height: 60px;
+  font-size: 48px;
+  line-height: 120%;
 }
 
 h3{
-  font-size: 40px;
-  line-height: 44px;
+  font-size: px;
+  line-height: 120%;
+  font-weight: 400;
 }
 
 ul{
@@ -68,8 +69,8 @@ html{
 #top-nav{
   position: fixed;
   top: 32px;
-  left: 0;
   width: 100%;
+  max-width: 1920px;
   z-index: 1000;
   height: 64px;
   text-align: right;
@@ -88,6 +89,7 @@ html{
 
 #top-nav.fixed a{
 	transition: color 0.3s ease, font-size 0.3s ease;
+  color:#000000;
 }
 
 #top-nav.fixed a:hover{
@@ -117,7 +119,7 @@ html{
 	top: 0;
 	right: 0;
 	margin-top: 20px;
-	margin-right: 15px;
+	margin-right: 40px;
 }
 
 p{
@@ -127,8 +129,11 @@ p{
 a {
   color: #780A28;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
   transition: color 0.3s ease, font-size 0.3s ease;
+  margin-top: 16px;
 } 
 
 #about{
@@ -137,7 +142,7 @@ a {
 }
 
 a:hover {
-  font-size: 21px;
+  font-size: 18px;
   color: darken(#780A28, 3%);
 }
 
@@ -202,6 +207,22 @@ img {
   align-items: center;
   width: 18%;
   margin: 20px auto;
+}
+
+#oferta .section-title{
+  margin: 8px auto 20px auto;
+}
+
+#oferta .section-head{
+  display: flex;
+  flex-direction: column;
+}
+
+#oferta .section-head p{
+  max-width: 720px;
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 #features{
@@ -327,7 +348,7 @@ img {
   display:flex;
   flex-direction: column;
   height: 100%;
-  background-image: url("bg.png");
+  background-image: url("bg-new.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -337,13 +358,15 @@ img {
 
 #top-nav a {
   font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400;
   text-transform: uppercase;
-  margin: 4px;
-  color: #000000;
+  margin: 8px;
+  color: #f1f1f1;
 }
 
 #top-nav a:hover {
-  font-size: 17px;
+  font-size: 18px;
   color: white;
 }
 
@@ -354,7 +377,7 @@ img {
 #top-nav .logo{
   width: 120px;
   position: absolute;
-  left: 32px;
+  left: 40px;
   top: 0;
 }
 
@@ -363,11 +386,12 @@ img {
 }
 
 .page-intro {
-  margin-top: 258px;
+  margin-top: 15%;
   text-align: left;
 }
 
 .main-title {
+  text-align: center;
   margin: 0px;
   font-family: "Newsreader";
   font-weight: 400;
@@ -376,10 +400,11 @@ img {
 
 .main-subtitle {
   margin: 0px 0 128px 0;
+  text-align: center;
   font-family: "Inter";
   font-weight: 400;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 24px;
+  line-height: 120%;
   color: #F8F8F8;
 }
 
@@ -389,7 +414,6 @@ img {
   color: #780A28;
   cursor: default;
   margin: 0;
-  text-transform: uppercase;
 }
 
 .statement {
@@ -431,13 +455,26 @@ img {
 
 .section-logo{
   width: 40%;
+  max-height: 600px;
+  display: flex;
+  align-items: center; 
   background-color: #780A28;
-  padding: 10%;
+}
+
+.section-logo img{   
+    max-height: 70%;
+    max-width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    object-fit: contain;     
 }
 
 .section-text{
+  align-items: center;
   width: 60%;
-  padding: 40px;
+  max-width: 920px;
+  padding: 120px 80px;
+  display: block;
 }
 
 .carousel {
@@ -495,15 +532,79 @@ img {
   height: 100%;
   backface-visibility: hidden;
   /* pointer-events: none; */
+  background: inherit;
 }
 
-.flip-card-front {
-  background-color: #eee;
+.flip-card-front .card-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;        
+  padding: 0 32px;
+  height: 100%;
+  justify-content: center; 
+}
+
+.flip-card-back .card-content {
+  display: flex;
+  align-items: center;
+  gap: 32px;        
+  padding: 0 auto;
+  height: 100%;
+  justify-content: center; 
+}
+
+.flip-card-front .wine-bottle {
+  height: 100%;    
+  width: auto; 
+  object-fit: contain;
+}
+
+.flip-card-back .wine-bottle {
+  height: 90%;    
+  width: auto; 
+  object-fit: contain;
+}
+
+.wine-info {
+  text-align: left;
+  max-width: 360px;
+}
+
+.wine-info h3{
+  font-size: 40px;
+  font-family: Newsreader;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.wine-info h4{
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.wine-info p{
+  font-size: 20px;
 }
 
 .flip-card-back {
-  background-color: #ddd;
   transform: rotateY(180deg);
+}
+
+.card-white-1 {
+  background: #EAE4D6;
+  color: #780A28;
+}
+
+.card-white-2 {
+  background: #736B56;
+  color: #EAE4D6;
+}
+
+.card-red {
+  background: #d4edda;
 }
 
 /* sekcja OFERTA */
@@ -513,7 +614,7 @@ img {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  gap: 10px;
+  gap: 32px;
   height: auto;
   margin: 0 40px;
 }
@@ -522,16 +623,19 @@ img {
   display: flex;
   flex-direction: row;
   gap: 24px;
-  height: 25%;
+  height: 400px;
+  background-color: #FBF7F4;
 }
 
 .section-content .photo{
-  width: 50%;
+  width: 300px;
   background-color:#6E2020;
 }
 
 .section-content .description{
   width: 50%;
+  align-content: center;
+  text-align: center;
 }
 
 .section-content h3 {
