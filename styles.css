@@ -15,6 +15,7 @@ body, html {
   margin: 0;
   height: 100%;
   font-family: "Inter";
+  background-color: #F4F1F1;
 }
 
 h1{
@@ -484,7 +485,7 @@ img {
   /* justify-content: space-between; */
   /* gap: 16px 16px; */
   position: relative;
-  height: 1100px;
+  height: 1700px;
 }
 
 .flip-wrapper{
@@ -499,7 +500,7 @@ img {
   border-radius: 8px;
 
   /* width: 200px; */
-  height: 50%;
+  height: 33.333%;
   margin: 0;
   padding: 0;
   /* perspective: 1000px; efekt 3D */
@@ -538,7 +539,7 @@ img {
 .flip-card-front .card-content {
   display: flex;
   align-items: center;
-  gap: 40px;        
+  gap: 8px;        
   padding: 0 32px;
   height: 100%;
   justify-content: center; 
@@ -560,7 +561,7 @@ img {
 }
 
 .flip-card-back .wine-bottle {
-  height: 90%;    
+  height: 100%;    
   width: auto; 
   object-fit: contain;
 }
@@ -593,18 +594,19 @@ img {
   transform: rotateY(180deg);
 }
 
-.card-white-1 {
+.card-white-2 {
   background: #EAE4D6;
   color: #780A28;
 }
 
-.card-white-2 {
+.card-white-1 {
   background: #736B56;
   color: #EAE4D6;
 }
 
 .card-red {
-  background: #d4edda;
+  background: #780A28;
+  color: #EAE4D6;
 }
 
 /* sekcja OFERTA */
@@ -613,22 +615,25 @@ img {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  align-items: center;
   justify-content: space-between;
   gap: 32px;
   height: auto;
-  margin: 0 40px;
+  padding: 0 40px;
 }
 
 .section-content {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  justify-content: space-between;
   height: 400px;
   background-color: #FBF7F4;
+  max-width: 1440px;
 }
 
 .section-content .photo{
   width: 300px;
+  height: auto;
   background-color:#6E2020;
 }
 
@@ -636,9 +641,11 @@ img {
   width: 50%;
   align-content: center;
   text-align: center;
+  justify-items: center;
 }
 
 .section-content h3 {
+  font-size: 24px;
   margin-bottom: 16px;
 }
 
