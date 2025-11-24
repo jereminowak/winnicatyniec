@@ -568,7 +568,7 @@ img {
 
 .wine-info {
   text-align: left;
-  max-width: 360px;
+  width: 360px;
 }
 
 .wine-info h3{
