@@ -18,8 +18,8 @@ body, html {
 }
 
 h1{
-  font-size: 80px;
-  line-height: 82px;
+  font-size: 55px;
+  line-height: 60px;
 }
 
 h2{
@@ -222,6 +222,7 @@ img {
 }
 
 #gallery{
+  display: none;
   scroll-margin-top: 64px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -245,6 +246,7 @@ img {
 }
 
 #kontakt{
+  padding-top: 50px;
   scroll-margin-top: 64px;
   margin-bottom: 40px;
 }
@@ -262,7 +264,7 @@ img {
 }
 
 #kontakt .mapa{
-  width: 50%;
+  width: 43%;
   position: relative;
 }
 
@@ -280,6 +282,7 @@ img {
   border: 1px solid grey;
   height: 55px;
   padding-left: 10px;
+  border-radius: 12px;
 }
 
 #kontakt form textarea{
@@ -289,6 +292,7 @@ img {
   resize: none;
   padding-left: 10px;
   padding-top: 10px;
+  border-radius: 12px;
 }
 
 #kontakt button{
@@ -363,7 +367,7 @@ img {
 }
 
 .page-intro {
-  margin-top: 258px;
+  margin-top: 230px;
   text-align: left;
 }
 
@@ -372,15 +376,17 @@ img {
   font-family: "Newsreader";
   font-weight: 400;
   color: #F8F8F8;
+  text-align: center;
 }
 
 .main-subtitle {
   margin: 0px 0 128px 0;
   font-family: "Inter";
   font-weight: 400;
-  font-size: 32px;
+  font-size: 22px;
   line-height: 40px;
   color: #F8F8F8;
+  text-align: center;
 }
 
 .section-title {
@@ -508,6 +514,17 @@ img {
 
 /* sekcja OFERTA */
 
+#oferta .container .section-head{
+  justify-content: space-around;
+  flex-direction: column;
+  padding-bottom: 60px;
+}
+
+.section-introduction{
+  margin-top: 20px;
+  text-align: center;
+}
+
 .section-container {
   display: flex;
   flex-direction: column;
@@ -526,7 +543,7 @@ img {
 }
 
 .section-content .photo{
-  width: 50%;
+  width: 25%;
   background-color:#6E2020;
 }
 
@@ -549,6 +566,22 @@ img {
 
 .section-content ul li {
   margin-bottom: 8px;
+}
+
+.section-outro{
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  height: 25%;
+  padding-bottom: 50px;
+  background-color: red;
+}
+
+.section-outro .description{
+  padding-left: 150px;
+  padding-right: 150px;
+  text-align: center;
 }
 
 .image-container {
@@ -654,7 +687,7 @@ footer .socials{
   width: 120px;
   position: absolute;
   left: 12px;
-  top: 0;
+  top: -17px;
 }
 
 #mobile-nav .logo img{
@@ -684,6 +717,18 @@ footer .socials{
   font-size: 26px;
   font-weight: bold;
   color: white;
+}
+
+#closeBtn{
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+#burgerBtn{
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .noscroll {
