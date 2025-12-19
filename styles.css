@@ -152,6 +152,10 @@ img {
   display: flex;
 }
 
+.logo img{
+  display: inline;
+}
+
 .container {
   max-width: 100%;/*1200px;*/
   margin: 0 auto;
@@ -965,15 +969,44 @@ footer .socials{
     padding-right: 20px;
   }
 
+  .carousel{
+    height: 1400px;
+  }
+
   #wina .flip-wrapper{
     width: 100%;
-    height: 25%;
+    height: 20%;
   }
 
   #wina .button{
     width: 45%;
   }
 
-  #mobile-nav{
+  /* .jeden{
+    position: absolute;
+    left: -2%;
+    width: 40%;
   }
+
+  .dwa{
+    position: absolute;
+    right: -2%;
+  }
+
+  .wine-info h3{
+    font-size: 25px;
+  }
+
+  .wine-info h4{
+    font-size: 16px;
+  }
+
+  .wine-info.dwa{
+    text-align: left;
+    width: 63%
+  }
+
+  .wine-info{
+    width: auto;
+  } */
 }
