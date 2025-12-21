@@ -550,7 +550,7 @@ img {
   display: flex;
   align-items: center;
   gap: 8px;        
-  padding: 0 32px;
+  padding: 0;
   height: 100%;
   justify-content: center; 
 }
@@ -578,7 +578,23 @@ img {
 
 .wine-info {
   text-align: left;
-  width: 360px;
+}
+
+.flip-card-back .wine-info{
+  text-align: right;
+  padding-right: 8%;
+  padding-left: 4%;
+}
+
+.flip-card-back .wine-photo{
+  margin-right: 0;
+  width: 50%;
+}
+
+.wine-photo{
+  height: 100%;
+  margin-left: -8%;
+  width: 50%;
 }
 
 .wine-info h3{
@@ -630,6 +646,8 @@ img {
 .section-introduction{
   margin-top: 20px;
   text-align: center;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
 .section-container {
@@ -656,6 +674,13 @@ img {
   height: auto;
   width: 25%;
   background-color:#6E2020;
+  overflow: hidden;
+}
+
+.section-content .photo img{
+  object-fit: cover;
+  object-position: center;
+  max-width: 200%;
 }
 
 .section-content .description{
@@ -663,11 +688,13 @@ img {
   align-content: center;
   text-align: center;
   justify-items: center;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .section-content h3 {
   font-size: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 }
 
 .section-content p {
@@ -690,12 +717,12 @@ img {
   gap: 24px;
   height: 25%;
   padding-bottom: 50px;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .section-outro .description{
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 20%;
+  padding-right: 20%;
   text-align: center;
 }
 
@@ -753,6 +780,7 @@ footer .reserved{
 
 footer .reserved p{
   color: white;
+  font-size: 12px;
 }
 
 footer .socials{
