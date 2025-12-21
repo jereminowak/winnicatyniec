@@ -2,7 +2,7 @@ const btn = document.getElementById('backToTop');
 
 window.addEventListener('scroll', function () {
   const nav = document.getElementById('top-nav');
-  if(this.window.innerWidth>1060){
+  if(this.window.innerWidth<1060){
     
     if (this.window.scrollY>270){
       btn.classList.add('seen');
@@ -10,6 +10,8 @@ window.addEventListener('scroll', function () {
     else{
       btn.classList.remove('seen');
     }
+  }
+  else{
 
     if (window.scrollY >= 20) {
       nav.classList.add('fixed');

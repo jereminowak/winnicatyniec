@@ -6,6 +6,7 @@ RewriteRule ^q/FFFF(\d+)$ /QR/QR_$1.html
 RewriteCond %{HTTP_REFERER} !^https?://(www\.)?winnicatyniec\.pl/ [NC]
 RewriteCond %{REQUEST_METHOD} GET
 RewriteCond %{REQUEST_URI} !^/$ [NC]      # Wyj¹tek: strona g³ówna
+#RewriteCond %{REQUEST_URI} !^/dev($|/) [NC]   #   wyjatek dla deva
 #RewriteCond %{REQUEST_URI} !^/q(.*)?$ [NC]   # Wyj¹tek: œcie¿ka /q
 RewriteRule ^(.*)$ / [R=302,L]
 
