@@ -99,7 +99,7 @@
 		<div class="carousel">
 			<div class="flip-wrapper">
 				<div class="flip-card card-white-1">
-					<div class="flip-card-inner">
+					<div id="flipper" class="flip-card-inner">
 						<div class="flip-card-front">
 							<div class="card-content">
 								<div class="wine-photo">
@@ -114,12 +114,14 @@
 						<div class="flip-card-back">
 							<div class="card-content">
 								<div class="wine-info">
-									<h3>Seyval Blanc</h3>
-									<h4>Białe półwytrawne</h4>
-									<p>W nosie polne kwiaty i zioła. W ustach słodsze cytrusy, mirabelka, skórka cytrynowa.</p>
+									<div class="wine-info-text">
+										<h3>Seyval Blanc</h3>
+										<h4>Białe półwytrawne</h4>
+										<p>W nosie polne kwiaty i zioła. W ustach słodsze cytrusy, mirabelka, skórka cytrynowa.</p>
+									</div>
 								</div>
 								<div class="wine-photo">
-									<img src="Seyval_Blanc.png" class="wine-bottle">
+									<img src="Seyval_Blanc.png" class="wine-bottle back">
 								</div>
 							</div>
 						</div>
@@ -128,7 +130,7 @@
 			</div>
 			<div class="flip-wrapper">
 				<div class="flip-card card-white-2">
-					<div class="flip-card-inner">
+					<div id="flipper1" class="flip-card-inner">
 						<div class="flip-card-front">
 							<div class="card-content">
 								<div class="wine-photo">
@@ -143,12 +145,14 @@
 						<div class="flip-card-back">
 							<div class="card-content">
 								<div class="wine-info">
-									<h3>Johanniter</h3>
-									<h4>Białe półwytrawne</h4>
-									<p>W nosie polne kwiaty i zioła. W ustach słodsze cytrusy, mirabelka, skórka cytrynowa.</p>
+									<div class="wine-info-text">
+										<h3>Johanniter</h3>
+										<h4>Białe półwytrawne</h4>
+										<p>W nosie polne kwiaty i zioła. W ustach słodsze cytrusy, mirabelka, skórka cytrynowa.</p>
+									</div>	
 								</div>
 								<div class="wine-photo">
-									<img src="Johanniter.png" class="wine-bottle">
+									<img src="Johanniter.png" class="wine-bottle back">
 								</div>
 							</div>
 						</div>
@@ -157,7 +161,7 @@
 			</div>
 			<div class="flip-wrapper">
 				<div class="flip-card card-white-3">
-					<div class="flip-card-inner">
+					<div id="flipper2" class="flip-card-inner">
 						<div class="flip-card-front">
 							<div class="card-content">
 								<div class="wine-photo">
@@ -172,21 +176,23 @@
 						<div class="flip-card-back">
 							<div class="card-content">
 								<div class="wine-info">
-									<h3>Solaris</h3>
-									<h4>Białe półsłodkie</h4>
-									<p>W nosie polne kwiaty i zioła. W ustach słodsze cytrusy, mirabelka, skórka cytrynowa.</p>
+									<div class="wine-info-text">
+										<h3>Solaris</h3>
+										<h4>Białe półsłodkie</h4>
+										<p>W nosie polne kwiaty i zioła. W ustach słodsze cytrusy, mirabelka, skórka cytrynowa.</p>
+									</div>
 								</div>
 								<div class="wine-photo">
-									<img src="Solaris.png" class="wine-bottle">
+									<img src="Solaris.png" class="wine-bottle back">
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="flip-wrapper ">
+			<div class="flip-wrapper">
 				<div class="flip-card card-white-4">
-					<div class="flip-card-inner">
+					<div id="flipper3" class="flip-card-inner">
 						<div class="flip-card-front">
 							<div class="card-content">
 								<div class="wine-photo">
@@ -201,25 +207,27 @@
 						<div class="flip-card-back">
 							<div class="card-content">
 								<div class="wine-info">
-									<h3>Souvignier Gris</h3>
-									<h4>Białe wytrawne</h4>
-									<p>W nosie polne kwiaty i zioła. W ustach słodsze cytrusy, mirabelka, skórka cytrynowa.</p>
+									<div class="wine-info-text">
+										<h3>Souvignier Gris</h3>
+										<h4>Białe wytrawne</h4>
+										<p>W nosie polne kwiaty i zioła. W ustach słodsze cytrusy, mirabelka, skórka cytrynowa.</p>
+									</div>
 								</div>
 								<div class="wine-photo">
-									<img src="Souvignier_Gris.png" class="wine-bottle">
+									<img src="Souvignier_Gris.png" class="wine-bottle back">
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="flip-wrapper">
+			<div class="flip-wrapper last">
 				<div class="flip-card card-red">
-					<div class="flip-card-inner">
+					<div id="flipper4" class="flip-card-inner">
 						<div class="flip-card-front">
 							<div class="card-content">
 								<div class="wine-photo">
-									<img src="Cuvee_Red-1.png" class="wine-bottle">
+									<img src="Cuvee_Red-1.png" class="wine-bottle back">
 								</div>
 								<div class="wine-info">
 									<h3>Red Cuvee</h3>
@@ -230,10 +238,12 @@
 						<div class="flip-card-back">
 							<div class="card-content">
 								<div class="wine-info">
-									<h3>Red Cuvee</h3>
-									<h4>Czerwone wytrawne</h4>
-									<p>Regent | Cabernet Cortis | Zweigelt</p>
-									<p>W nosie polne kwiaty i zioła. W ustach słodsze cytrusy, mirabelka, skórka cytrynowa.</p>
+									<div class="wine-info-text">
+										<h3>Red Cuvee</h3>
+										<h4>Czerwone wytrawne</h4>
+										<p>Regent | Cabernet Cortis | Zweigelt</p>
+										<p>W nosie polne kwiaty i zioła. W ustach słodsze cytrusy, mirabelka, skórka cytrynowa.</p>
+									</div>
 								</div>
 								<div class="wine-photo">
 									<img src="Cuvee_Red.png" class="wine-bottle">
@@ -245,7 +255,7 @@
 			</div>
 			<div class="flip-wrapper drugi">
 				<div class="wine-info">
-					<h4>Czekamy na rocznik 2025</h4>
+					<!-- <h4>Czekamy na rocznik 2025</h4> -->
 				</div>
 			</div>
 		</div>
@@ -265,51 +275,75 @@
 
 			<div class="section-container">
 				<div class="section-content">
-					<div class="photo">
-						<img src="degustacje1.png">
+					<div class="photo one">
+						<!-- <img src="degustacje1.png"> -->
 					</div>
 					<div class="description">
 						<h3>01 Degustacje komentowane</h3>
 						<p>Oferta kierowana jest do grup od 2 do 60 osób. Spotkanie rozpoczynamy spacerem po winnicy, podczas którego opowiadamy o historii miejsca oraz o procesie tworzenia wina. W zależności od wybranego pakietu, program obejmuje także zwiedzanie winiarni. Następnie zapraszamy na zadaszony taras widokowy, gdzie odbywa się degustacja minimum czterech win. Towarzyszą jej regionalne sery, domowy chleb i polskie oleje. Po zakończeniu istnieje możliwość zakupu win oraz pozostania w winnicy na dalszy wypoczynek.</p>
 					</div>
-					<div class="photo">
-						<img src="degustacje2.png">
+					<div class="photo two">
+						<!-- <img src="degustacje2.png"> -->
 					</div>
 				</div>
 				<div class="section-content">
-					<div class="photo">
-						<img src="degustacje1.png">
+					<div class="photo three">
+						<!-- <img src="degustacje1.png"> -->
 					</div>
 					<div class="description">
 						<h3>02 Spotkania firmowe i integracje</h3>
 						<p>Winnica to idealne miejsce na szkolenia, spotkania integracyjne czy firmowe wydarzenia. Do dyspozycji gości oddajemy kilka przestrzeni: okrągły taras widokowy dla 30 osób, prostokątną wiatę dla 40 osób oraz klimatyczny podziemny zbiornik z antresolą na kolejne 30 miejsc. Na rozległej polanie można rozbić namioty, a całość terenu pozwala na organizację spotkań nawet do 200 osób. Zapewniamy stoły, krzesła, leżaki, nagłośnienie i miejsce do tańca. Dodatkowo można wynająć grill gazowy z obsługą lub bez. Do dyspozycji uczestników jest także parking, stojaki na rowery oraz zaplecze sanitarne.</p>						
 					</div>
-					<div class="photo">
-						<img src="degustacje2.png">
+					<div class="photo four">
+						<!-- <img src="degustacje2.png"> -->
 					</div>
 				</div>
 				<div class="section-content">
-					<div class="photo">
-						<img src="degustacje1.png">
+					<div class="photo five">
+						<!-- <img src="degustacje1.png"> -->
 					</div>
 					<div class="description">
 						<h3>03 Wieczory panieńskie</h3>
 						<p>Oferta kierowana jest do grup od 2 do 60 osób. Spotkanie rozpoczynamy spacerem po winnicy, podczas którego opowiadamy o historii miejsca oraz o procesie tworzenia wina. W zależności od wybranego pakietu, program obejmuje także zwiedzanie winiarni. Następnie zapraszamy na zadaszony taras widokowy, gdzie odbywa się degustacja minimum czterech win. Towarzyszą jej regionalne sery, domowy chleb i polskie oleje. Po zakończeniu istnieje możliwość zakupu win oraz pozostania w winnicy na dalszy wypoczynek.</p>
 					</div>
-					<div class="photo">
-						<img src="degustacje1.png">
+					<div class="photo six">
+						<!-- <img src="degustacje1.png"> -->
 					</div>
 				</div>
 				<div class="section-content">
-					<div class="photo">
-						<img src="degustacje1.png">
+					<div class="photo seven">
+						<!-- <img src="degustacje1.png"> -->
 					</div>
 					<div class="description">
 						<h3>04 Wydarzenia Sezonowe</h3>
 						<p>Oferta kierowana jest do grup od 2 do 60 osób. Spotkanie rozpoczynamy spacerem po winnicy, podczas którego opowiadamy o historii miejsca oraz o procesie tworzenia wina. W zależności od wybranego pakietu, program obejmuje także zwiedzanie winiarni. Następnie zapraszamy na zadaszony taras widokowy, gdzie odbywa się degustacja minimum czterech win. Towarzyszą jej regionalne sery, domowy chleb i polskie oleje. Po zakończeniu istnieje możliwość zakupu win oraz pozostania w winnicy na dalszy wypoczynek.</p>
 					</div>
-					<div class="photo">
-						<img src="degustacje1.png">
+					<div class="photo eight">
+						<!-- <img src="degustacje1.png"> -->
+					</div>
+				</div>
+				<div class="section-content">
+					<div class="photo nine">
+						<!-- <img src="degustacje1.png"> -->
+					</div>
+					<div class="description">
+						<h3>05 Sesje zdjęciowe</h3>
+						<p>Oferta kierowana jest do grup od 2 do 60 osób. Spotkanie rozpoczynamy spacerem po winnicy, podczas którego opowiadamy o historii miejsca oraz o procesie tworzenia wina. W zależności od wybranego pakietu, program obejmuje także zwiedzanie winiarni. Następnie zapraszamy na zadaszony taras widokowy, gdzie odbywa się degustacja minimum czterech win. Towarzyszą jej regionalne sery, domowy chleb i polskie oleje. Po zakończeniu istnieje możliwość zakupu win oraz pozostania w winnicy na dalszy wypoczynek.</p>
+					</div>
+					<div class="photo ten">
+						<!-- <img src="degustacje1.png"> -->
+					</div>
+				</div>
+				<div class="section-content">
+					<div class="photo eleven">
+						<!-- <img src="degustacje1.png"> -->
+					</div>
+					<div class="description">
+						<h3>06 Kamperem do winnicy</h3>
+						<p>Oferta kierowana jest do grup od 2 do 60 osób. Spotkanie rozpoczynamy spacerem po winnicy, podczas którego opowiadamy o historii miejsca oraz o procesie tworzenia wina. W zależności od wybranego pakietu, program obejmuje także zwiedzanie winiarni. Następnie zapraszamy na zadaszony taras widokowy, gdzie odbywa się degustacja minimum czterech win. Towarzyszą jej regionalne sery, domowy chleb i polskie oleje. Po zakończeniu istnieje możliwość zakupu win oraz pozostania w winnicy na dalszy wypoczynek.</p>
+					</div>
+					<div class="photo twelve">
+						<!-- <img src="degustacje1.png"> -->
 					</div>
 				</div>
 				<div class="section-outro">
@@ -319,6 +353,12 @@
 				</div>
 			</div>
   		</div>
+	</section>
+
+	<section class="statement state2">
+		<div class="ornament">
+	
+		</div>
 	</section>
 	
 	<section class="gallery" id="gallery">
@@ -359,7 +399,7 @@
 					</form>
 				</div>
 				<div class="mapa">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.540603689457!2d19.804999375729622!3d50.01996521826722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165fcf57d9fcab%3A0x994d56422bb9ac65!2sWinnica%20Tyniec!5e0!3m2!1spl!2spl!4v1745136586811!5m2!1spl!2spl" style="border:0; border-radius: 8px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.540603689457!2d19.804999375729622!3d50.01996521826722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165fcf57d9fcab%3A0x994d56422bb9ac65!2sWinnica%20Tyniec!5e0!3m2!1spl!2spl!4v1745136586811!5m2!1spl!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 			</div>
 		</div>
@@ -367,25 +407,29 @@
 	</section>
 
 	<footer>
-		<div class="dane">
-			<div class="logo">
-				tu bedzie logo
+		<div class="topfoot">
+			<div class="dane">
+				<div class="logo">
+					<img src="WT-sygnet-03.svg"/>
+				</div>
+				<div class="tekst">
+					<p class="main">Winnica Tyniec</p>
+					<p>ul. Dziewiarzy 11K/2</p>
+					<p>Kraków - Tyniec</p>
+				</div>
 			</div>
-			<div class="tekst">
-				<p class="main">Winnica Tyniec</p>
-				<p>ul. Dziewiarzy 11K/2</p>
-				<p>Kraków - Tyniec</p>
+			<div class="socials">
+				<div class="facebook">
+					<img src="facebook-logo-1.svg"/>
+				</div>
+				<div class="instagram">
+					<img src="instagram-logo-1.svg"/>
+				</div>
 			</div>
 		</div>
-		<div class="reserved">
-			<p>All Rights Reserved | Winnica Tyniec 2025</p>
-		</div>
-		<div class="socials">
-			<div class="facebook">
-				fejs
-			</div>
-			<div class="instagram">
-				insta
+		<div class="bottomfoot">
+			<div class="reserved">
+				<p>All Rights Reserved | Winnica Tyniec 2025</p>
 			</div>
 		</div>
 		

@@ -24,6 +24,56 @@ window.addEventListener('scroll', function () {
 
 const mobNav = document.getElementById("mobile-nav");
 const topNav = document.getElementById("top-nav");
+const flipcard = document.getElementById("flipper");
+const flipcard1 = document.getElementById("flipper1");
+const flipcard2 = document.getElementById("flipper2");
+const flipcard3 = document.getElementById("flipper3");
+const flipcard4 = document.getElementById("flipper4");
+
+flipcard.addEventListener('click', function(){
+
+  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
+
+  if(isTouchDevice){
+    this.classList.toggle("is-flipped");
+  }
+});
+
+flipcard1.addEventListener('click', function(){
+
+  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
+
+  if(isTouchDevice){
+    this.classList.toggle("is-flipped");
+  }
+});
+
+flipcard2.addEventListener('click', function(){
+
+  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
+
+  if(isTouchDevice){
+    this.classList.toggle("is-flipped");
+  }
+});
+
+flipcard3.addEventListener('click', function(){
+
+  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
+
+  if(isTouchDevice){
+    this.classList.toggle("is-flipped");
+  }
+});
+
+flipcard4.addEventListener('click', function(){
+
+  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
+
+  if(isTouchDevice){
+    this.classList.toggle("is-flipped");
+  }
+});
 
 document.getElementById("burgerBtn").onclick = function(){
   window.scrollTo({top: 0, behavior: 'smooth'});

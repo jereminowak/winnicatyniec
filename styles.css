@@ -61,6 +61,7 @@ html{
 #backToTop.seen{
   bottom: 30px;
   transition: bottom 0.5s ease;
+  display: none;
 } 
 
 #backToTop:hover {
@@ -198,7 +199,7 @@ img {
 #wina{
   scroll-margin-top: 64px;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 0;
 }
 
 #wina .section-head{
@@ -251,7 +252,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  margin: 0 40px;
+  margin: 0 16px;
 }
 
 #features .container{
@@ -292,13 +293,14 @@ img {
 #kontakt .section-data{
   display: flex;
   flex-direction: row;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 #kontakt .formularz{
   width: 45%;
   margin-right: 5%;
   position: relative;
-  padding-left: 40px;
 }
 
 #kontakt .mapa{
@@ -309,34 +311,45 @@ img {
 #kontakt .mapa iframe{
   width: 100%;
   height: 450px;
+  border-radius: 0;
 }
 
 #kontakt form{
   display: flex;
   flex-direction: column;
+  position: relative;
+  height: 100%;
 }
 
 #kontakt form input{
-  border: 1px solid grey;
+  font-family: 'Inter';
+  border: 1px solid #B0B0B0;
   height: 55px;
   padding-left: 10px;
-  border-radius: 12px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #7E7E7E;
+  /* border-radius: 12px; */
 }
 
 #kontakt form textarea{
   font-family: Inter;
+  font-size: 16px;
+  line-height: 150%;
+  color: #7E7E7E;
   border: 1px solid grey;
   height: 157px;
   resize: none;
   padding-left: 10px;
   padding-top: 10px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
 #kontakt button{
   height: 44px;
   position: absolute;
   bottom: 0;
+
 }
 
 .item {
@@ -407,7 +420,7 @@ img {
 }
 
 .page-intro {
-  margin-top: 230px;
+  margin: auto;
   text-align: left;
 }
 
@@ -421,7 +434,8 @@ img {
 }
 
 .main-subtitle {
-  margin: 0px 0 128px 0;
+  margin-top: 0;
+  margin-bottom: 0;
   text-align: center;
   font-family: "Inter";
   font-weight: 400;
@@ -448,6 +462,10 @@ img {
   height: 240px;
 }
 
+.state2{
+  background-image: url("kieliszki.png");
+}
+
 .statement .ornament {
   font-size: 48px;
   font-weight: 500;
@@ -470,11 +488,11 @@ img {
   cursor: pointer;
 }
 
-.button:hover { 
+/* .button:hover { 
   background-color: #780A28; 
   border: 2px solid #780A28;
   color: white;
-}
+} */
 
 .section-logo{
   width: 40%;
@@ -542,10 +560,28 @@ img {
   transition: transform 1s;
   transform-style: preserve-3d;
   position: relative;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
-.flip-wrapper:hover .flip-card-inner {
+.flip-card-inner.is-flipped{
   transform: rotateY(180deg);
+}
+
+@media(hover: hover){
+.flip-wrapper:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+.flip-card-inner{
+  cursor: default;
+}
+
+.button:hover { 
+  background-color: #780A28; 
+  border: 2px solid #780A28;
+  color: white;
+}
 }
 
 .flip-card-front,
@@ -556,6 +592,14 @@ img {
   backface-visibility: hidden;
   /* pointer-events: none; */
   background: inherit;
+}
+
+.card-white-1 p, .card-white-4 p, .card-red p{
+  color: #EAE4D6;
+}
+
+.card-white-2 p, .card-white-3 p{
+  color: #780A28;
 }
 
 .flip-card-front .card-content {
@@ -570,7 +614,7 @@ img {
 .flip-card-back .card-content {
   display: flex;
   align-items: center;
-  gap: 32px;        
+  gap: 0;        
   padding: 0 auto;
   height: 100%;
   justify-content: center; 
@@ -588,9 +632,24 @@ img {
   object-fit: contain;
 }
 
+.wine-bottle{
+  position: absolute;
+  right: 2rem;
+}
+
+.back{
+  right: auto;
+  left: 2rem;
+}
+
 .wine-info {
   text-align: left;
-  width: 50%;
+  width: 55%;
+}
+
+.drugi{
+  background-color: #780A28;
+  border-radius: 0;
 }
 
 .drugi .wine-info{
@@ -602,20 +661,31 @@ img {
 }
 
 .flip-card-back .wine-info{
-  text-align: right;
-  padding-right: 8%;
-  padding-left: 4%;
+  text-align: left;
+  width: 60%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flip-card-back .wine-info-text{
+  position: absolute;
+  right: 0;
+  width: 80%;
 }
 
 .flip-card-back .wine-photo{
   margin-right: 0;
-  width: 50%;
+  width: 40%;
 }
 
 .wine-photo{
   height: 100%;
-  margin-left: -8%;
-  width: 50%;
+  width: 45%;
+  position: relative;
 }
 
 .wine-info h3{
@@ -672,6 +742,11 @@ img {
   justify-content: space-around;
   flex-direction: column;
   padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+#oferta .container{
+  background-color: #EDECE7;
 }
 
 .section-introduction{
@@ -702,10 +777,60 @@ img {
 }
 
 .section-content .photo{
-  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 25%;
   background-color:#6E2020;
   overflow: hidden;
+}
+
+.one{
+  background-image: url("degustacje1.png");
+}
+
+.two{
+  background-image: url("degustacje2.png");
+}
+
+.three{
+  background-image: url("firmowe1.png");
+}
+
+.four{
+  background-image: url("firmowe2.png");
+}
+
+.five{
+  background-image: url("panienski2.png");
+}
+
+.six{
+  background-image: url("panienski1.png");
+}
+
+.seven{
+  background-image: url("sezonowe1.png");
+}
+
+.eight{
+  background-image: url("sezonowe2.png");
+}
+
+.nine{
+  background-image: url("sesje1.png");
+}
+
+.ten{
+  background-image: url("sesje2.png");
+}
+
+.eleven{
+  background-image: url("kamper1.png");
+}
+
+.twelve{
+  background-image: url("kamper1.png");
 }
 
 .section-content .photo img{
@@ -767,21 +892,36 @@ img {
 
 
 footer{
-  background-color:#6E2020;
-  height: 32vh;
+  background-color:#780A28;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topfoot{
+  width: 100%;
+  height: 70%;
   display: flex;
   flex-direction: row;
+}
+
+.bottomfoot{
+  width: 100%;
+  height: 30%;
 }
 
 footer .dane{
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: row;
-  margin-top: 40px;
+  line-height: 13px;
+  align-items: center;
+  justify-content: center;
 }
 
 footer .dane .logo{
-  width: 40%;
+  width: 100px;
+  margin-top: 3rem;
 }
 
 footer .dane .tekst{
@@ -792,10 +932,13 @@ footer .dane .tekst .main{
   font-weight: bold;
 }
 
+footer p{
+  color: #EAE4D6;
+}
+
 footer .dane p{
   margin-bottom: 8px;
   margin-top: 0;
-  color: white;
 }
 
 footer .reserved{
@@ -803,7 +946,7 @@ footer .reserved{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 100%;
   flex-wrap: wrap;
   align-content: flex-end;
   margin-bottom: 18px;
@@ -818,13 +961,13 @@ footer .socials{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  width: 21%;
+  justify-content: flex-end;
+  width: 50%;
   gap: 20px;
   flex-wrap: wrap;
   align-content: flex-end;
-  margin-bottom: 42px;
   margin-left: auto;
+  padding-right: 4%;
 }
 
 .ukryty{
@@ -1101,26 +1244,6 @@ footer .socials{
     padding: 0;
   }
 
-  .card-white-1{
-    background: #EAE4D6;
-    color: #780A28;
-  }
-
-  .card-white-2{
-    background: #736B56;
-    color: #EAE4D6;
-  }
-
-  .card-white-3{
-    background: #EAE4D6;
-    color: #780A28;
-  }
-
-  .card-white-4{
-    background: #736B56;
-    color: #EAE4D6;
-  }
-
   .card-white-2 .card-content{
     flex-direction: row-reverse;
   }
@@ -1135,5 +1258,32 @@ footer .socials{
 
   .card-white-4 .wine-info{
     text-align: right;
+  }
+
+  #kontakt .section-data{
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 16px;
+    padding-right: 16px;
+  }  
+
+  #kontakt .formularz{
+    width: 100%;
+  }
+
+  #kontakt .mapa{
+    width: 100%;
+  }
+
+  #kontakt button{
+    width: 100%;
+    position: relative;
+    bottom: auto;
+  }
+
+  .button{
+    background-color: #780A28; 
+    border: 2px solid #780A28;
+    color: white;
   }
 }

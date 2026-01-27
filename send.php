@@ -1,17 +1,37 @@
 <?php
-$to = "i.am.not.common.jn@gmail.com";
-$subject = "Nowa wiadomość z formularza";
+// Włączamy raportowanie błędów, żebyś widział co jest nie tak
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
-$message = "Imię i nazwisko: " . $_POST['name'] . "\n";
-$message .= "E-mail: " . $_POST['email'] . "\n";
-$message .= "Telefon: " . $_POST['phone'] . "\n";
-$message .= "Wiadomość:\n" . $_POST['message'];
+$to = "njeremi0@gmail.com";
+$subject = "Nowa wiadomosc z formularza";
 
-$headers = "From: " . $_POST['email'];
+// Pobieranie danych w sposób kompatybilny ze starym PHP
+$name    = isset($_POST['name']) ? strip_tags($_POST['name']) : 'Brak';
+$email   = isset($_POST['email']) ? $_POST['email'] : '';
+$phone   = isset($_POST['phone']) ? strip_tags($_POST['phone']) : 'Brak';
+$message_content = isset($_POST['message']) ? strip_tags($_POST['message']) : '';
 
-if (mail("njeremi0@gmail.com", $subject, $message)) {
-  echo "Wiadomość wysłana!";
+// Bardzo prosta walidacja e-maila
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    die("Blad: Niepoprawny adres e-mail.");
+}
+
+// Budowanie treści
+$body = "Imie: $name\n";
+$body .= "E-mail: $email\n";
+$body .= "Tel: $phone\n";
+$body .= "Wiadomosc:\n$message_content";
+
+// Nagłówki jako zwykły ciąg znaków (string) - najbardziej kompatybilne
+$headers = "From: kasia.kula@winnicatyniec.pl" . "\r\n"; // ZMIEŃ NA E-MAIL W TWOJEJ DOMENIE
+$headers .= "Reply-To: " . $email . "\r\n";
+$headers .= "Content-Type: text/plain; charset=utf-8";
+
+// Wysyłka
+if (mail($to, $subject, $body, $headers)) {
+    echo "Wiadomosc wyslana!";
 } else {
-  echo "Błąd przy wysyłaniu.";
+    echo "Blad serwera przy wysylaniu maila.";
 }
 ?>
