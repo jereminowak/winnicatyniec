@@ -18,9 +18,15 @@ body, html {
   background-color: #F4F1F1;
 }
 
+.telefon-link{
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 h1{
-  font-size: 64px;
-  line-height: 120%;
+  font-size: 55px;
+  line-height: 60px;
 }
 
 h2{
@@ -29,7 +35,7 @@ h2{
 }
 
 h3{
-  font-size: px;
+  font-size: 22px;
   line-height: 120%;
   font-weight: 400;
 }
@@ -40,6 +46,7 @@ ul{
 
 html{
 	scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #backToTop {
@@ -61,6 +68,7 @@ html{
 #backToTop.seen{
   bottom: 30px;
   transition: bottom 0.5s ease;
+  display: none;
 } 
 
 #backToTop:hover {
@@ -71,7 +79,6 @@ html{
   position: fixed;
   top: 32px;
   width: 100%;
-  max-width: 1920px;
   z-index: 1000;
   height: 64px;
   text-align: right;
@@ -123,6 +130,14 @@ html{
 	margin-right: 40px;
 }
 
+#top-nav .refs a{
+  cursor: pointer;
+}
+
+a{
+  cursor: pointer;
+}
+
 p{
 	color: #3B3B3B;
 }
@@ -150,6 +165,10 @@ a:hover {
 img {
   max-width: 100%;
   display: flex;
+}
+
+.logo img{
+  display: inline;
 }
 
 .container {
@@ -186,7 +205,7 @@ img {
 #wina{
   scroll-margin-top: 64px;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 0;
 }
 
 #wina .section-head{
@@ -208,6 +227,10 @@ img {
   align-items: center;
   width: 18%;
   margin: 20px auto;
+}
+
+#oferta{
+  scroll-margin-top: 64px;
 }
 
 #oferta .section-title{
@@ -235,7 +258,14 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  margin: 0 40px;
+  margin: 0 16px;
+}
+
+.section-head-mid{
+  display: flex;
+  align-items: center;
+  padding-top: 1.5rem;
+  margin: 0;
 }
 
 #features .container{
@@ -244,6 +274,7 @@ img {
 }
 
 #gallery{
+  display: none;
   scroll-margin-top: 64px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -266,21 +297,49 @@ img {
   margin: 20px auto;
 }
 
+.dolny-tekst-mobile{
+  display: none;
+}
+
 #kontakt{
+  padding-top: 50px;
   scroll-margin-top: 64px;
   margin-bottom: 40px;
 }
 
+#kontakt .section-head{
+  margin-left: 80px;
+}
+
 #kontakt .section-data{
   display: flex;
+  flex-direction: column;
+  padding-right: 80px;
+  padding-left: 80px;
+  gap: 32px;
+}
+
+.data-gora{
+  display: flex;
   flex-direction: row;
+  gap: 32px;
+  width: 100%;
+}
+
+.data-dol{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.data-dol p{
+  text-align: center;
 }
 
 #kontakt .formularz{
-  width: 45%;
-  margin-right: 5%;
+  width: 50%;
   position: relative;
-  padding-left: 40px;
 }
 
 #kontakt .mapa{
@@ -291,21 +350,31 @@ img {
 #kontakt .mapa iframe{
   width: 100%;
   height: 450px;
+  border-radius: 0;
 }
 
 #kontakt form{
   display: flex;
   flex-direction: column;
+  position: relative;
+  height: 100%;
 }
 
 #kontakt form input{
-  border: 1px solid grey;
+  font-family: 'Inter';
+  border: 1px solid #B0B0B0;
   height: 55px;
   padding-left: 10px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #7E7E7E;
 }
 
 #kontakt form textarea{
   font-family: Inter;
+  font-size: 16px;
+  line-height: 150%;
+  color: #7E7E7E;
   border: 1px solid grey;
   height: 157px;
   resize: none;
@@ -315,8 +384,7 @@ img {
 
 #kontakt button{
   height: 44px;
-  position: absolute;
-  bottom: 0;
+  width: 25%;
 }
 
 .item {
@@ -348,7 +416,7 @@ img {
   position:relative;
   display:flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   background-image: url("bg-new.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -387,7 +455,7 @@ img {
 }
 
 .page-intro {
-  margin-top: 15%;
+  margin: auto;
   text-align: left;
 }
 
@@ -397,16 +465,19 @@ img {
   font-family: "Newsreader";
   font-weight: 400;
   color: #F8F8F8;
+  text-align: center;
 }
 
 .main-subtitle {
-  margin: 0px 0 128px 0;
+  margin-top: 0;
+  margin-bottom: 0;
   text-align: center;
   font-family: "Inter";
   font-weight: 400;
-  font-size: 24px;
-  line-height: 120%;
+  font-size: 22px;
+  line-height: 40px;
   color: #F8F8F8;
+  text-align: center;
 }
 
 .section-title {
@@ -424,6 +495,10 @@ img {
   background-position: center center;
   background-attachment: fixed;
   height: 240px;
+}
+
+.state2{
+  background-image: url("kieliszki.png");
 }
 
 .statement .ornament {
@@ -448,11 +523,11 @@ img {
   cursor: pointer;
 }
 
-.button:hover { 
+/* .button:hover { 
   background-color: #780A28; 
   border: 2px solid #780A28;
   color: white;
-}
+} */
 
 .section-logo{
   width: 40%;
@@ -485,7 +560,17 @@ img {
   /* justify-content: space-between; */
   /* gap: 16px 16px; */
   position: relative;
-  height: 1700px;
+  height: 1600px;
+}
+
+.carousel-2 {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  /* justify-content: space-between; */
+  /* gap: 16px 16px; */
+  position: relative;
+  height: 1100px;
 }
 
 .flip-wrapper{
@@ -504,6 +589,11 @@ img {
   margin: 0;
   padding: 0;
   /* perspective: 1000px; efekt 3D */
+  cursor: default;
+}
+
+.carousel-2 .flip-wrapper{
+  height: 50%;
 }
 
 .flip-card {
@@ -520,11 +610,35 @@ img {
   transition: transform 1s;
   transform-style: preserve-3d;
   position: relative;
+  cursor: default;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent; /* Usuwa szary prostokąt przy kliknięciu */
+  -webkit-user-select: none;                /* Blokuje zaznaczanie tekstu na Safari */
+  user-select: none;
 }
 
-.flip-wrapper:hover .flip-card-inner {
+@media(hover: none){
+  .flip-card-inner.is-flipped{
+    transform: rotateY(180deg);
+  }
+
+  .statement{
+    background-attachment: scroll;
+  }
+}
+
+@media(hover: hover){
+.flip-wrapper:hover .flip-card-inner{
   transform: rotateY(180deg);
 }
+}
+
+.button:hover { 
+  background-color: #780A28; 
+  border: 2px solid #780A28;
+  color: white;
+}
+
 
 .flip-card-front,
 .flip-card-back {
@@ -536,11 +650,24 @@ img {
   background: inherit;
 }
 
+.flip-card-front{
+  z-index: 2;
+  transform: rotateY(0deg) translateY(1px);
+}
+
+.card-white-1 p, .card-white-4 p, .card-red p{
+  color: #EAE4D6;
+}
+
+.card-white-2 p, .card-white-3, .card-rose p{
+  color: #780A28;
+}
+
 .flip-card-front .card-content {
   display: flex;
   align-items: center;
   gap: 8px;        
-  padding: 0 32px;
+  padding: 0;
   height: 100%;
   justify-content: center; 
 }
@@ -548,7 +675,7 @@ img {
 .flip-card-back .card-content {
   display: flex;
   align-items: center;
-  gap: 32px;        
+  gap: 0;        
   padding: 0 auto;
   height: 100%;
   justify-content: center; 
@@ -566,9 +693,65 @@ img {
   object-fit: contain;
 }
 
+.wine-bottle{
+  position: absolute;
+  right: 2rem;
+}
+
+/* .back{
+  right: auto;
+  left: 2rem;
+} */
+
 .wine-info {
   text-align: left;
-  width: 360px;
+  width: 55%;
+}
+
+.drugi{
+  background-color: #780A28;
+  border-radius: 0;
+}
+
+.drugi-jasny{
+  background-color: #EAE4D6;
+  border-radius: 0;
+}
+
+.drugi .wine-info{
+  width: 100%;
+}
+
+.drugi .wine-info h4{
+  text-align: center;
+}
+
+.flip-card-back .wine-info{
+  text-align: left;
+  width: 60%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flip-card-back .wine-info-text{
+  position: absolute;
+  right: 0;
+  width: 80%;
+}
+
+.flip-card-back .wine-photo{
+  margin-right: 0;
+  width: 40%;
+}
+
+.wine-photo{
+  height: 100%;
+  width: 45%;
+  position: relative;
 }
 
 .wine-info h3{
@@ -581,6 +764,7 @@ img {
 
 .wine-info h4{
   font-size: 24px;
+  line-height: 130%;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
@@ -588,10 +772,33 @@ img {
 
 .wine-info p{
   font-size: 20px;
+  line-height: 130%;
+}
+
+.wine-info-text h3,
+.wine-info-text h4,
+.wine-info-text p {
+  margin: 0.5rem 0;
+}
+
+.wine-info h3,
+.wine-info h4,
+.wine-info p {
+  margin: 1rem 0;
 }
 
 .flip-card-back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(1px);
+}
+
+.card-white-4{
+  background: #736B56;
+  color: #EAE4D6;
+}
+
+.card-white-3{
+  background: #EAE4D6;
+  color: #780A28;
 }
 
 .card-white-2 {
@@ -609,7 +816,58 @@ img {
   color: #EAE4D6;
 }
 
+.card-rose{
+  background: #EDE0DC;
+  color: #780A28;
+}
+
+.wine-badges {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.badge {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+}
+
+/* rocznik */
+.badge--year {
+  background: rgba(255, 255, 255, 0.35); 
+  border: 1px solid rgba(0, 0, 0, 0.15); 
+  color:#3B3B3B;
+}
+
+/* alkohol */
+.badge--alcohol {
+  background: rgba(255, 255, 255, 0.35); 
+  border: 1px solid rgba(0, 0, 0, 0.15); 
+  color:#3B3B3B;
+}
+
 /* sekcja OFERTA */
+
+#oferta .container .section-head{
+  justify-content: space-around;
+  flex-direction: column;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+#oferta .container{
+  background-color: #EDECE7;
+}
+
+.section-introduction{
+  margin-top: 20px;
+  text-align: center;
+  padding-right: 10%;
+  padding-left: 10%;
+}
 
 .section-container {
   display: flex;
@@ -622,19 +880,95 @@ img {
   padding: 0 40px;
 }
 
-.section-content {
+.section-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.section-content-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 400px;
+  height: auto;
   background-color: #FBF7F4;
   max-width: 1440px;
 }
 
-.section-content .photo{
-  width: 300px;
-  height: auto;
+.section-content-bottom{
+  display: none;
+  height: 18.75rem;
+}
+
+.section-content-top .photo{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 25%;
   background-color:#6E2020;
+  overflow: hidden;
+}
+
+.section-content-bottom .photo{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
+  background-color:#6E2020;
+  overflow: hidden;
+}
+
+.one{
+  background-image: url("degustacje1.png");
+}
+
+.two{
+  background-image: url("degustacje2.png");
+}
+
+.three{
+  background-image: url("firmowe1.png");
+}
+
+.four{
+  background-image: url("firmowe2.png");
+}
+
+.five{
+  background-image: url("sezonowe1.png");
+}
+
+.six{
+  background-image: url("sezonowe2.png");
+}
+
+.seven{
+  background-image: url("panienski2.png");
+}
+
+.eight{
+  background-image: url("panienski1.png");
+}
+
+.nine{
+  background-image: url("sesje1.png");
+}
+
+.ten{
+  background-image: url("sesje2.png");
+}
+
+.eleven{
+  background-image: url("kamper1.png");
+}
+
+.twelve{
+  background-image: url("kamper2.png");
+}
+
+.section-content .photo img{
+  object-fit: cover;
+  object-position: center;
+  max-width: 200%;
 }
 
 .section-content .description{
@@ -642,11 +976,14 @@ img {
   align-content: center;
   text-align: center;
   justify-items: center;
+  padding-right: 50px;
+  padding-left: 50px;
+  height: 410px;
 }
 
 .section-content h3 {
   font-size: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 }
 
 .section-content p {
@@ -662,6 +999,22 @@ img {
   margin-bottom: 8px;
 }
 
+.section-outro{
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  height: 25%;
+  padding-bottom: 50px;
+  /* background-color: red; */
+}
+
+.section-outro .description{
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
+}
+
 .image-container {
   flex: 1;
   max-width: 40%;
@@ -670,23 +1023,81 @@ img {
   background-image: url("mgliste.png");
 }
 
+#dofinansowania{
+  /* height: 500px; */
+  width: 100%;
+  margin-top: 40px;
+  background-color: white;
+}
+
+#dofinansowania .container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* height: 500px; */
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 40px;
+}
+
+.section-logos{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.section-logos img{
+  width: 70%;
+}
+
+#dofinansowania .section-text-dof{
+  width: 100%;
+}
+
+.section-text-dof p1{
+  font-weight: bold;
+}
+
+.mobilka{
+  display: none;
+}
+
+.komp{
+  display: flex;
+}
 
 footer{
-  background-color:#6E2020;
-  height: 32vh;
+  background-color:#780A28;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topfoot{
+  width: 100%;
+  height: 70%;
   display: flex;
   flex-direction: row;
+}
+
+.bottomfoot{
+  width: 100%;
+  height: 30%;
 }
 
 footer .dane{
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: row;
-  margin-top: 40px;
+  line-height: 13px;
+  align-items: center;
+  justify-content: center;
 }
 
 footer .dane .logo{
-  width: 40%;
+  width: 100px;
+  margin-top: 3rem;
 }
 
 footer .dane .tekst{
@@ -697,10 +1108,13 @@ footer .dane .tekst .main{
   font-weight: bold;
 }
 
+footer p{
+  color: #EAE4D6;
+}
+
 footer .dane p{
   margin-bottom: 8px;
   margin-top: 0;
-  color: white;
 }
 
 footer .reserved{
@@ -708,27 +1122,28 @@ footer .reserved{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 100%;
   flex-wrap: wrap;
   align-content: flex-end;
   margin-bottom: 18px;
 }
 
 footer .reserved p{
-  color: white;
+  color: #EAE4D6;
+  font-size: 12px;
 }
 
 footer .socials{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  width: 21%;
+  justify-content: flex-end;
+  width: 50%;
   gap: 20px;
   flex-wrap: wrap;
   align-content: flex-end;
-  margin-bottom: 42px;
   margin-left: auto;
+  padding-right: 4%;
 }
 
 .ukryty{
@@ -737,12 +1152,24 @@ footer .socials{
 
 
 #mobile-nav{
+  font-family: 'Inter';
+  position: fixed;
+  top: 0;
+  right: 0;
   height: 100%;
   width: 100%;
   background-color: #780A28;
   z-index: 10000;
   display: flex;
   flex-direction: column;
+
+  transform: translateX(100%);
+
+  transition: 0.4s ease-in-out;
+}
+
+#mobile-nav.active {
+  transform: translateX(0); /* Wraca na ekran */
 }
 
 #mobile-nav .top{
@@ -765,7 +1192,6 @@ footer .socials{
   width: 120px;
   position: absolute;
   left: 12px;
-  top: 0;
 }
 
 #mobile-nav .logo img{
@@ -793,12 +1219,84 @@ footer .socials{
 
 #mobile-nav .refs a{
   font-size: 26px;
-  font-weight: bold;
   color: white;
+  font-weight: 400;
+}
+
+#closeBtn{
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+#burgerBtn{
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .noscroll {
   overflow: hidden;
+}
+
+.plus-prawy{
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.plus-lewy{
+  display: none;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.minus-lewy{
+  display: none;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.minus-prawy{
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.rodo-container{
+  display: none;
+  flex-direction: row;
+  gap: 0.3rem;
+}
+
+.checkbox{
+  height: 1rem !important;
+}
+
+.polityka-prywatnosci{
+  color: black;
+  font-size: 10px;
+  transition: none;
+  line-height: 150%;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.polityka-prywatnosci:hover{
+  font-size: 10px;
+}
+
+.dane-osobowe{
+  padding-bottom: 10px;
+}
+
+.dane-osobowe p{
+  font-size: 10px;
+  line-height: 150%;
 }
 
 
@@ -806,7 +1304,7 @@ footer .socials{
 
 /*TABLET*/
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   body, html {
     font-size: 16px;
     line-height: 20px;
@@ -839,16 +1337,72 @@ footer .socials{
     font-size: 16px;
     padding: 12px;
   }
+  .carousel{
+    height: 1200px;
+  }
+  .wine-info h3{
+    font-size: 25px;
+  }
+  .wine-info h4{
+    font-size: 15px;
+  }
+  .statement{
+    background-attachment: scroll;
+  }
+  .plus-prawy{
+    display: block;
+  }
 
+  .plus-lewy{
+    display: block;
+  }
+
+  .minus-prawy{
+    display: block;
+  }
+
+  .minus-lewy{
+    display: block;
+  }
+
+  .plus-mobile{
+    display: none;
+  }
+
+  .plus-tablet{
+    display: flex;
+  }
+
+  .minus-mobile{
+    display: none;
+  }
+
+  .minus-tablet{
+    display: flex;
+  }
+
+  .flip-wrapper{
+    cursor: pointer;
+  }
 }
 
 /*MOBILE*/
 
-@media (max-width: 550px) {
+@media (max-width: 800px) {
 
   body, html {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .main-title{
+    font-size: 40px;
+    line-height: 110%;
+  }
+
+  .main-subtitle{
+    font-size: 18px;
+    line-height: 120%;
   }
 
   h1{
@@ -876,11 +1430,6 @@ footer .socials{
 
   .button{
     font-size: 14px;
-  }
-
-  .main-subtitle {
-    font-size: 24px;
-    line-height: 28px;
   }
 
   .section-container {
@@ -920,15 +1469,317 @@ footer .socials{
     padding-right: 20px;
   }
 
+  .carousel{
+    height: 1800px;
+  }
+
   #wina .flip-wrapper{
     width: 100%;
-    height: 25%;
+    height: 20%;
   }
 
   #wina .button{
     width: 45%;
   }
 
-  #mobile-nav{
+  .wine-photo{
+    margin-left: 0;
+    width: 40%;
   }
+
+  .wine-info{
+    width: 60%;
+  }
+
+  img{
+    /* max-width: 200%; */
+  }
+
+  .card-content h3{
+    font-size: 30px;
+  }
+
+  .card-content h4{
+    font-size: 15px;
+  }
+
+  .drugi{
+    display: none;
+  }
+
+  .section-introduction{
+    padding: 0;
+  }
+
+  .section-content-top .photo{
+    display: none;
+  }
+
+  .section-content-bottom{
+    display: flex;
+  }
+
+  .section-content .description{
+    width: 100%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    height: auto;
+  }
+
+  .section-content h3{
+    font-size: 20px;
+  }
+
+  .section-outro .description{
+    padding: 0;
+  }
+
+  .card-white-2 .wine-bottle{
+    right: auto;
+    left: 2rem;
+  }
+
+  .card-white-4 .wine-bottle{
+    right: auto;
+    left: 2rem;
+  }
+
+  .card-white-3{
+    background-color: #736B56;
+    color: #EAE4D6;
+  }
+
+  .card-white-3 p{
+    color: #EAE4D6;
+  }
+
+  .card-white-4{
+    background-color: #EAE4D6;
+    color: #780A28;
+  }
+
+  .card-white-4 p{
+    color: #780A28;
+  }
+
+  .card-white-2 .card-content{
+    flex-direction: row-reverse;
+  }
+
+  .card-white-2 .wine-info{
+    text-align: right;
+  }
+
+  .card-white-2 .wine-info .wine-info-text{
+    right: auto;
+    left: 0;
+  }
+
+  .card-white-4 .card-content{
+    flex-direction: row-reverse;
+  }
+
+  .card-white-4 .wine-info{
+    text-align: right;
+  }
+
+  .card-white-4 .wine-info .wine-info-text{
+    right: auto;
+    left: 0;
+  }
+
+  #kontakt .section-data{
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 16px;
+    padding-right: 16px;
+  }  
+
+  #kontakt .section-head{
+    margin-left: 16px;
+  }
+
+  .data-gora{
+    flex-direction: column;
+  }
+
+  #kontakt .formularz{
+    width: 100%;
+  }
+
+  #kontakt .mapa{
+    width: 100%;
+  }
+
+  #kontakt button{
+    width: 100%;
+    position: relative;
+    bottom: auto;
+  }
+
+  .button{
+    background-color: #780A28; 
+    border: 2px solid #780A28;
+    color: white;
+  }
+
+  .statement{
+    background-attachment: scroll;
+  }
+
+  .topfoot{
+    flex-direction: column;
+  }
+
+  footer .dane{
+    width: 100%;
+    height: 70%;
+    justify-content: flex-start;
+    padding-left: 2rem;
+  }
+
+  footer .socials{
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+  }
+
+  footer{
+    height: 250px;
+  }
+
+  .bottomfoot{
+    display: flex;
+    align-items: center;
+  }
+
+  footer .reserved{
+    margin-bottom: 0;
+  }
+
+  footer .dane .logo{
+    width: 90px;
+  }
+
+  footer .dane .tekst{
+    margin-top: 30px;
+  }
+
+  #wina .section-title2{
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .wine-info h3{
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .wine-info h4{
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 2px;
+  }
+
+  .wine-info-text h3{
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .wine-info-text h4{
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 2px;
+  }
+
+  .wine-info-text p{
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  #oferta .description p{
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  #oferta .section-title{
+    margin-bottom: 0;
+  }
+
+  #oferta .section-container{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  #oferta .section-introduction{
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  #oferta .container .section-head{
+    padding-bottom: 0;
+  }
+
+  .komp{
+    display: none;
+  }
+
+  .mobilka{
+    display: flex;
+  }
+
+  .section-logos{
+    padding-top: 0;
+  }
+
+  .section-logos img{
+    width: 100%;
+  }
+
+  #dofinansowania .container{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+  }
+
+  .minus-tablet{
+    display: none;
+  }
+
+  .minus-mobile{
+    display: flex;
+  }
+
+  .plus-tablet{
+    display: none;
+  }
+
+  .plus-mobile{
+    display: flex;
+  }
+
+  .dolny-tekst-mobile{
+    display: block;
+    text-align: center;
+  }
+
+  .dolny-tekst-mobile{
+    text-align: center;
+  }
+
+  .data-dol{
+    display: none;
+  }
+}
+
+@media (max-width: 600px){
+  .carousel{
+    height: 1400px;
+  }
+  /* .flip-card-inner.is-flipped{
+  transform: rotateY(180deg);
+  } */
 }
