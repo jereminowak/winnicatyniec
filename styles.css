@@ -35,7 +35,7 @@ h2{
 }
 
 h3{
-  font-size: px;
+  font-size: 22px;
   line-height: 120%;
   font-weight: 400;
 }
@@ -229,6 +229,38 @@ img {
   margin: 20px auto;
 }
 
+#kalendarz{
+  scroll-margin-top: 64px;
+}
+
+#kalendarz .section-title{
+  margin: 8px auto 20px auto;
+}
+
+#kalendarz .section-head{
+  display: flex;
+  flex-direction: column;
+}
+
+#kalendarz .section-head p{
+  max-width: 720px;
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.calendar-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.calendar-wrapper iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
+}
+
 #oferta{
   scroll-margin-top: 64px;
 }
@@ -259,6 +291,13 @@ img {
   align-items: center;
   padding: 1rem 0;
   margin: 0 16px;
+}
+
+.section-head-mid{
+  display: flex;
+  align-items: center;
+  padding-top: 1.5rem;
+  margin: 0;
 }
 
 #features .container{
@@ -556,6 +595,16 @@ img {
   height: 1600px;
 }
 
+.carousel-2 {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  /* justify-content: space-between; */
+  /* gap: 16px 16px; */
+  position: relative;
+  height: 1100px;
+}
+
 .flip-wrapper{
   display: flex;
   flex-direction: row;
@@ -573,6 +622,10 @@ img {
   padding: 0;
   /* perspective: 1000px; efekt 3D */
   cursor: default;
+}
+
+.carousel-2 .flip-wrapper{
+  height: 50%;
 }
 
 .flip-card {
@@ -638,7 +691,7 @@ img {
   color: #EAE4D6;
 }
 
-.card-white-2 p, .card-white-3 p{
+.card-white-2 p, .card-white-3 p, .card-rose p{
   color: #780A28;
 }
 
@@ -692,6 +745,11 @@ img {
   border-radius: 0;
 }
 
+.drugi-jasny{
+  background-color: #EAE4D6;
+  border-radius: 0;
+}
+
 .drugi .wine-info{
   width: 100%;
 }
@@ -738,13 +796,27 @@ img {
 
 .wine-info h4{
   font-size: 24px;
+  line-height: 130%;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   font-weight: 400;
 }
 
 .wine-info p{
   font-size: 20px;
+  line-height: 130%;
+}
+
+.wine-info-text h3,
+.wine-info-text h4,
+.wine-info-text p {
+  margin: 0.5rem 0;
+}
+
+.wine-info h3,
+.wine-info h4,
+.wine-info p {
+  margin: 1rem 0;
 }
 
 .flip-card-back {
@@ -774,6 +846,39 @@ img {
 .card-red {
   background: #780A28;
   color: #EAE4D6;
+}
+
+.card-rose{
+  background: #EDE0DC;
+  color: #780A28;
+}
+
+.wine-badges {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.badge {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+}
+
+/* rocznik */
+.badge--year {
+  background: rgba(255, 255, 255, 0.35); 
+  border: 1px solid rgba(0, 0, 0, 0.15); 
+  color:#3B3B3B;
+}
+
+/* alkohol */
+.badge--alcohol {
+  background: rgba(255, 255, 255, 0.35); 
+  border: 1px solid rgba(0, 0, 0, 0.15); 
+  color:#3B3B3B;
 }
 
 /* sekcja OFERTA */
@@ -1267,6 +1372,9 @@ footer .socials{
   .carousel{
     height: 1200px;
   }
+  .carousel-2{
+    height: 800px;
+  }
   .wine-info h3{
     font-size: 25px;
   }
@@ -1400,9 +1508,18 @@ footer .socials{
     height: 1800px;
   }
 
+  .carousel-2{
+    height: 1440px;
+  }
+
   #wina .flip-wrapper{
     width: 100%;
     height: 20%;
+  }
+
+  #wina .carousel-2 .flip-wrapper{
+    width: 100%;
+    height: 25%;
   }
 
   #wina .button{
@@ -1433,6 +1550,10 @@ footer .socials{
   .drugi{
     display: none;
   }
+
+  .drugi-jasny {
+        display: none;
+    }
 
   .section-introduction{
     padding: 0;
@@ -1468,7 +1589,7 @@ footer .socials{
     left: 2rem;
   }
 
-  .card-white-4 .wine-bottle{
+  .card-white-4, .card-red .wine-bottle{
     right: auto;
     left: 2rem;
   }
@@ -1513,6 +1634,19 @@ footer .socials{
   }
 
   .card-white-4 .wine-info .wine-info-text{
+    right: auto;
+    left: 0;
+  }
+
+  .card-red .card-content{
+    flex-direction: row-reverse;
+  }
+
+  .card-red .wine-info{
+    text-align: right;
+  }
+
+  .card-red .wine-info .wine-info-text{
     right: auto;
     left: 0;
   }
@@ -1606,7 +1740,13 @@ footer .socials{
 
   .wine-info h4{
     font-size: 14px;
-    line-height: 120%;
+    line-height: 140%;
+    letter-spacing: 2px;
+  }
+
+  .wine-info p{
+    font-size: 14px;
+    line-height: 140%;
   }
 
   .wine-info-text h3{
@@ -1616,12 +1756,13 @@ footer .socials{
 
   .wine-info-text h4{
     font-size: 14px;
-    line-height: 120%;
+    line-height: 140%;
+    letter-spacing: 2px;
   }
 
   .wine-info-text p{
     font-size: 14px;
-    line-height: 120%;
+    line-height: 140%;
   }
 
   #oferta .description p{
@@ -1704,7 +1845,24 @@ footer .socials{
   .carousel{
     height: 1400px;
   }
+
+  .carousel-2{
+    height: 1120px;
+  }
+
   /* .flip-card-inner.is-flipped{
   transform: rotateY(180deg);
   } */
+}
+
+@media (max-width: 768px) {
+  .calendar-wrapper iframe {
+      height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-wrapper iframe {
+      height: 420px;
+  }
 }
