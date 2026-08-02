@@ -42,6 +42,7 @@ const flipcard5 = document.getElementById("flipper5");
 const flipcard6 = document.getElementById("flipper6");
 const flipcard7 = document.getElementById("flipper7");
 const flipcard8 = document.getElementById("flipper8");
+const flipcard9 = document.getElementById("flipper9");
 
 flipcard.addEventListener('click', function(){
 
@@ -112,6 +113,15 @@ flipcard7.addEventListener('click', function(){
 });
 
 flipcard8.addEventListener('click', function(){
+
+  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
+
+  if(isTouchDevice){
+    this.classList.toggle("is-flipped");
+  }
+});
+
+flipcard9.addEventListener('click', function(){
 
   const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
 
