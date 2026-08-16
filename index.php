@@ -5,7 +5,7 @@
   <title>Winnica Tyniec</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="style.css?v=2"/>
+  <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <style>@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 		 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
@@ -20,10 +20,10 @@
   <div id="mobile-nav">
 	<div class="top">
 		<div class="logo">
-			<a href="#"><img src="WT-logotyp-03.svg"></a>
+			<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/WT-logotyp-03.svg"></a>
 		</div>
 		<div class="burger">
-			<button id="closeBtn"><img src="close.svg"></button>
+			<button id="closeBtn"><img src="<?php echo get_template_directory_uri(); ?>/close.svg"></button>
 		</div>
 	</div>
 	<div class="bottom">
@@ -41,7 +41,7 @@
  
   <div id="top-nav">
 	<div class="logo">
-		<a id="glowna_strona"><img src="logo_nav.svg"></a>
+		<a id="glowna_strona"><img src="<?php echo get_template_directory_uri(); ?>/logo_nav.svg"></a>
 	</div>
 	<div class="refs">
 			<a id="about_menu1">O Winnicy</a>
@@ -52,7 +52,7 @@
 			<a id="kontakt_menu1">Kontakt</a>
 	</div>
 	<div class="burger">
-		<button id="burgerBtn"><img src="menuicon.svg"></button>
+		<button id="burgerBtn"><img src="<?php echo get_template_directory_uri(); ?>/menuicon.svg"></button>
 	</div>
   </div>
 	
@@ -66,7 +66,7 @@
 	<section class="about" id="about">
 	  <div class="container">
 		<div class="section-logo">
-			<img src="about-img.png">
+			<img src="<?php echo get_template_directory_uri(); ?>/about-img.png">
 		</div>
 		<div class="section-text">
 			<div class="section-head">
@@ -105,7 +105,7 @@
 							<div class="plus-prawy"><img src="plus_light.svg"/></div>
 							<div class="card-content">
 								<div class="wine-photo">
-									<img src="Johanniter-1.png" class="wine-bottle">
+									<img src="<?php echo get_template_directory_uri(); ?>/Johanniter-1.png" class="wine-bottle">
 								</div>
 								<div class="wine-info">
 									<h3>Johanniter</h3>
