@@ -5,7 +5,7 @@
   <title>Winnica Tyniec</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="styles.css?v=2"/>
+  <link rel="stylesheet" href="style.css?v=2"/>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <style>@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 		 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
@@ -110,6 +110,7 @@
 								<div class="wine-info">
 									<h3>Johanniter</h3>
 									<h4>Białe wytrawne</h4>
+									<p>APERITIF</p>
 								</div>
 							</div>
 						</div>
@@ -143,6 +144,7 @@
 								<div class="wine-info">
 									<h3>Souvignier Gris</h3>
 									<h4>Białe wytrawne</h4>
+									<p>STRUKTURALNE</p>
 								</div>
 							</div>
 						</div>
@@ -177,6 +179,7 @@
 								<div class="wine-info">
 									<h3>Seyval Blanc</h3>
 									<h4>Białe półwytrawne</h4>
+									<p>RZEŚKIE</p>
 								</div>
 							</div>
 						</div>
@@ -201,7 +204,7 @@
 			</div>
 			<div class="flip-wrapper">
 				<div class="flip-card card-red">
-					<div id="flipper4" class="flip-card-inner">
+					<div id="flipper3" class="flip-card-inner">
 						<div class="flip-card-front">
 							<div class="plus-lewy"><img src="plus_light.svg"/></div>
 							<div class="card-content">
@@ -211,6 +214,7 @@
 								<div class="wine-info">
 									<h3>Red Cuvee</h3>
 									<h4>Czerwone wytrawne</h4>
+									<p>Regent | Cabertner Cortis | Zweigelt</p>
 								</div>
 							</div>
 						</div>
@@ -243,7 +247,7 @@
 		<div class="carousel">
 			<div class="flip-wrapper">
 				<div class="flip-card card-white-2">
-					<div id="flipper" class="flip-card-inner" onclick="void(0)">
+					<div id="flipper4" class="flip-card-inner" onclick="void(0)">
 						<div class="flip-card-front">
 							<div class="plus-lewy"><img class="plus-mobile" src="plus_dark.svg"/></div>
 							<div class="plus-prawy"><img class="plus-tablet" src="plus_dark.svg"/></div>
@@ -254,6 +258,7 @@
 								<div class="wine-info">
 									<h3>Souvignier Gris</h3>
 									<h4>Białe wytrawne</h4>
+									<p>ETERYCZNE</p>
 								</div>
 							</div>
 						</div>
@@ -277,7 +282,7 @@
 			</div>
 			<div class="flip-wrapper">
 				<div class="flip-card card-white-1">
-					<div id="flipper1" class="flip-card-inner">
+					<div id="flipper5" class="flip-card-inner">
 						<div class="flip-card-front">
 							<div class="plus-prawy"><img src="plus_light.svg"/></div>
 							<div class="card-content">
@@ -287,6 +292,7 @@
 								<div class="wine-info">
 									<h3>Seyval Blanc</h3>
 									<h4>Białe wytrawne</h4>
+									<p>DOJRZEWAJĄCE NA OSADZIE</p>
 								</div>
 							</div>
 						</div>
@@ -310,7 +316,7 @@
 			</div>
 			<div class="flip-wrapper">
 				<div class="flip-card card-white-4">
-					<div id="flipper2" class="flip-card-inner">
+					<div id="flipper6" class="flip-card-inner">
 						<div class="flip-card-front">
 							<div class="plus-lewy"><img class="plus-mobile" src="plus_dark.svg"/></div>
 							<div class="plus-prawy"><img class="plus-tablet" src="plus_light.svg"/></div>
@@ -321,6 +327,7 @@
 								<div class="wine-info">
 									<h3>Johannniter</h3>
 									<h4>Białe wytrawne</h4>
+									<p>WIBRACYJNE</p>
 								</div>
 							</div>
 						</div>
@@ -345,7 +352,7 @@
 			</div>
 			<div class="flip-wrapper">
 				<div class="flip-card card-rose">
-					<div id="flipper3" class="flip-card-inner">
+					<div id="flipper7" class="flip-card-inner">
 						<div class="flip-card-front">
 							<div class="plus-prawy"><img class="plus-mobile" src="plus_dark.svg"/></div>
 							<div class="plus-prawy"><img class="plus-tablet" src="plus_dark.svg"/></div>
@@ -356,6 +363,7 @@
 								<div class="wine-info">
 									<h3>Blush wine</h3>
 									<h4>Różowe wytrawne</h4>
+									<p>PROMIENNE</p>
 									<p>z odmian Regent i Cabernet Cortis</p>
 								</div>
 							</div>
@@ -379,9 +387,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="flip-wrapper last">
+			<div class="flip-wrapper">
 				<div class="flip-card card-white-2">
-					<div id="flipper4" class="flip-card-inner">
+					<div id="flipper8" class="flip-card-inner">
 						<div class="flip-card-front">
 							<div class="plus-lewy"><img class="plus-mobile" src="plus_dark.svg"/></div>
 							<div class="plus-prawy"><img class="plus-tablet" src="plus_dark.svg"/></div>
@@ -392,6 +400,7 @@
 								<div class="wine-info">
 									<h3>Solaris</h3>
 									<h4>Białe półwytrawne</h4>
+									<p>AKSAMITNE</p>
 								</div>
 							</div>
 						</div>
@@ -414,9 +423,40 @@
 					</div>
 				</div>
 			</div>
-			<div class="flip-wrapper drugi-jasny">
-				<div class="wine-info">
-					<!-- <h4>Czekamy na rocznik 2025</h4> -->
+			<div class="flip-wrapper">
+				<div class="flip-card card-white-1">
+					<div id="flipper9" class="flip-card-inner">
+						<div class="flip-card-front">
+							<div class="plus-prawy"><img class="plus-mobile" src="plus_light.svg"/></div>
+							<div class="plus-prawy"><img class="plus-tablet" src="plus_light.svg"/></div>
+							<div class="card-content">
+								<div class="wine-photo">
+									<img src="GAS-2.png" class="wine-bottle">
+								</div>
+								<div class="wine-info">
+									<h3>Gas and Roll</h3>
+									<h4>Białe wytrawne</h4>
+									<p>PERLIŚCIE GAZOWANE</p>
+								</div>
+							</div>
+						</div>
+						<div class="flip-card-back">
+							<div class="minus-prawy"><img class="minus-mobile" src="minus_light.svg"/></div>
+							<div class="minus-prawy"><img class="minus-tablet" src="minus_light.svg"/></div>
+							<div class="card-content">
+								<div class="wine-info">
+									<div class="wine-info-text">
+										<h3>Gas and Roll</h3>
+										<h4>Białe wytrawne</h4>
+										<p>Zbalnasowane, o subiektywnym profilu aromatycznym. Delikatna kwasowość, zielone owoce, kremowa tekstura, kredowo-mineralny akcent.</p>
+									</div>
+								</div>
+								<div class="wine-photo">
+									<img src="GAS-1.png" class="wine-bottle back">
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -426,7 +466,21 @@
 		</button> -->
 	  </div>
 	</section>
-	
+
+	<section class="kalendarz" id="kalendarz">
+		<div class="section-head">
+			<h2 class="section-title">Kalendarz wydarzeń</h2>
+			<div class="calendar-wrapper">
+				<iframe
+					src="https://calendar.google.com/calendar/embed?src=0bdcdd0d456278ccaf42eb56cfb0914d49d7d0078dbf41ca10aebd35507d768d%40group.calendar.google.com&ctz=Europe%2FWarsaw&mode=AGENDA"
+					frameborder="0"
+					scrolling="no">
+				</iframe>
+			</div>
+		</div>
+		
+	</section>
+
 	<section class="oferta" id="oferta">
 	  	<div class="container">
 			<div class="section-head">

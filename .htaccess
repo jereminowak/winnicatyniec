@@ -1,23 +1,43 @@
 RewriteEngine On
 
-# Przepisanie na ladny adres z qr
-RewriteRule ^q/FFFF(\d+)$ /QR/QR_$1.html
+#RewriteCond %{REQUEST_METHOD} POST
+#RewriteRule ^ - [L]
 
-RewriteCond %{HTTP_REFERER} !^https?://(www\.)?winnicatyniec\.pl/ [NC]
-RewriteCond %{REQUEST_METHOD} GET
-RewriteCond %{REQUEST_URI} !^/$ [NC]      # Wyj¹tek: strona g³ówna
-#RewriteCond %{REQUEST_URI} !^/dev($|/) [NC]   #   wyjatek dla deva
+#RewriteCond %{QUERY_STRING} !^v=2$
+#RewriteRule ^(.*)$ /$1?v=2 [L,R=301]
+
+# Przepisanie na ladny adres z qr
+
+#RewriteCond %{HTTP_REFERER} !^https?://(www\.)?winnicatyniec\.pl/ [NC]
+#RewriteCond %{REQUEST_METHOD} GET
+#RewriteCond %{REQUEST_URI} !^/$ [NC]      # Wyj¹tek: strona g³ówna
 #RewriteCond %{REQUEST_URI} !^/q(.*)?$ [NC]   # Wyj¹tek: œcie¿ka /q
-RewriteRule ^(.*)$ / [R=302,L]
+#RewriteRule ^(.*)$ / [R=302,L]
 
 # Przekierowanie na stronê g³ówn¹, jeœli œcie¿ka nie jest "/" lub "/q"
 #RewriteCond %{REQUEST_URI} !^/$ [NC]      # Wyj¹tek: strona g³ówna
 #RewriteCond %{REQUEST_URI} !^/q(/.*)?$ [NC]   # Wyj¹tek: œcie¿ka /q
 #RewriteRule ^(.*)$ / [R=302,L]
 
+RewriteCond %{THE_REQUEST} /polityka_prywatnosci\.html [NC]
+RewriteRule ^polityka_prywatnosci\.html$ /polityka_prywatnosci [R=301,L]
+
+# 2. Wewnêtrzne przekierowanie, aby serwer wiedzia³, ¿e ma serwowaæ plik .html
+RewriteRule ^polityka_prywatnosci$ polityka_prywatnosci.html [L]
+
 # Przerzucenie na https
+
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]   
+RewriteRule ^(.*)$ https://www.winnicatyniec.pl/$1 [NC,R=301,L]
+
+RewriteCond %{HTTP_HOST} ^winnicatyniec\.pl$ [NC]
+RewriteRule ^(.*)$ https://www.winnicatyniec.pl/$1 [R=301,L]
+
+
+RewriteRule ^q/FFFF(\d+)$ /QR/QR_$1.html
+
+RewriteRule ^q/FFFE(\d+)$ /QR/QR_2_$1.html
+
 
 # Wy³¹czenie listowania katalogów
 Options -Indexes
