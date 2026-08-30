@@ -1,62 +1,6 @@
-<!DOCTYPE html>
-<html>
- <head>
-	
-  <title>Winnica Tyniec</title>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-  <style>@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-		 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
-  </style>
-  <link rel="icon" href="favicon.ico" type="image"/>
-	
- </head>
- <body>
+<?php get_header(); ?>
 
-  <button id="backToTop">W gore</button>
-
-  <div id="mobile-nav">
-	<div class="top">
-		<div class="logo">
-			<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/WT-logotyp-03.svg"></a>
-		</div>
-		<div class="burger">
-			<button id="closeBtn"><img src="<?php echo get_template_directory_uri(); ?>/close.svg"></button>
-		</div>
-	</div>
-	<div class="bottom">
-		<div class="refs">
-			<a id="about_menu">O WINNICY</a>
-			<a id="wina_menu">WINO</a>
-			<a id="oferta_menu">OFERTA PLENEROWA</a>
-			<!-- <a href="#atrakcje">Atrakcje w okolicy</a>-->
-			<!-- <a href="#gallery">GALERIA</a> -->
-			<a id="kontakt_menu">KONTAKT</a>
-		</div>
-	</div>
-	
-  </div>
- 
-  <div id="top-nav">
-	<div class="logo">
-		<a id="glowna_strona"><img src="<?php echo get_template_directory_uri(); ?>/logo_nav.svg"></a>
-	</div>
-	<div class="refs">
-			<a id="about_menu1">O Winnicy</a>
-			<a id="wina_menu1">Wino</a>
-			<a id="oferta_menu1">Oferta plenerowa</a>
-			<!-- <a href="#atrakcje">Atrakcje w okolicy</a>-->
-			<!-- <a href="#gallery">Galeria</a> -->
-			<a id="kontakt_menu1">Kontakt</a>
-	</div>
-	<div class="burger">
-		<button id="burgerBtn"><img src="<?php echo get_template_directory_uri(); ?>/menuicon.svg"></button>
-	</div>
-  </div>
-	
-  	<section class="main-splash">
+<section class="main-splash">
 	  <div class="page-intro">
 		<h1 class="main-title">Winnica Tyniec w Krakowie</h1>
 		<p class="main-subtitle">Miejsce, gdzie historia spotyka się z teraźniejszością</p>
@@ -655,19 +599,7 @@
 				<div class="data-gora">
 				<div class="formularz">
 					<p>Masz pytanie lub chcesz zaplanować wizytę w&nbsp;winnicy? Napisz do nas -&nbsp;chętnie pomożemy i&nbsp;doradzimy.</p>
-					<form id="contactForm" action="send.php" method="POST">
-						<input type="text" name="name" placeholder="Imię i nazwisko" required><br>
-						<input type="email" name="email" placeholder="Adres e-mail" required><br>
-						<input type="tel" name="phone" placeholder="Numer telefonu"><br>
-						<textarea name="message" placeholder="Treść wiadomości" required></textarea><br>
-						<!-- <div class="rodo-container" style="margin-bottom: 15px; font-size: 14px;">
-							<input class="checkbox" type="checkbox" name="rodo" id="rodo" required>
-							<label for="rodo">Administ *
-							</label>
-						</div> -->
-						<div class="dane-osobowe"><p>Administratorem danych osobowych są wspólnicy spółki cywilnej działającej pod firmą Winnica Tyniec s.c. z siedzibą w Dziewiarzy 11K lok. 2, 30-398 Kraków, woj. małopolskie, NIP: 6762590842, e-mail: kasia.kula@winnicatyniec.pl. Dane osobowe będą przetwarzane w celu udzielenia odpowiedzi na zapytanie przesłane przez formularz kontaktowy (art. 6 ust. 1 lit. b RODO). Więcej informacji o zasadach przetwarzania danych znajduje się w <a class="polityka-prywatnosci" href="https://www.winnicatyniec.pl/polityka_prywatnosci.html" target="_blank">Polityce prywatności</a>.</p></div>
-						<button class="button" type="submit">Wyślij</button>
-					</form>
+					<?php echo do_shortcode('[contact-form-7 id="bca0452" title="Formularz główny" html_id="contactForm"]'); ?>
 				</div>
 				<div class="dolny-tekst-mobile">
 					<p>Jeśli wolisz porozmawiać bezpośrednio, zadzwoń do nas<br/>
@@ -703,37 +635,6 @@ Wysokość wkładu Funduszy Europejskich: 376 771,06 PLN</p>
 			</div>
 		</div>
 	</section>
-
-	<footer>
-		<div class="topfoot">
-			<div class="dane">
-				<div class="logo">
-					<img src="<?php echo get_template_directory_uri(); ?>/WT-sygnet-03.svg"/>
-				</div>
-				<div class="tekst">
-					<p class="main">Winnica Tyniec</p>
-					<p>ul. Dziewiarzy 11K/2</p>
-					<p>Kraków - Tyniec</p>
-				</div>
-			</div>
-			<div class="socials">
-				<div class="facebook">
-					<a href="https://www.facebook.com/WinnicaTyniec/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/facebook-logo-1.svg"/></a>
-				</div>
-				<div class="instagram">
-					<a href="https://www.instagram.com/winnicatyniec/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/instagram-logo-1.svg"/></a>
-				</div>
-			</div>
-		</div>
-		<div class="bottomfoot">
-			<div class="reserved">
-				<p>All Rights Reserved | Winnica Tyniec 2025</p>
-			</div>
-		</div>
-		
-	</footer>
-
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-	<script src="script.js?v=2"></script>
- </body>
-</html>
+	
+<?php get_footer(); ?>
+</body>

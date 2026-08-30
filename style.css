@@ -399,31 +399,39 @@ img {
   height: 100%;
 }
 
-#kontakt form input{
+#kontakt form input[type="text"], 
+#kontakt form input[type="email"], 
+#kontakt form input[type="tel"] {
   font-family: 'Inter';
   border: 1px solid #B0B0B0;
   height: 55px;
   padding-left: 10px;
   font-size: 16px;
   line-height: 150%;
-  color: #7E7E7E;
+  color: #000000 !important; /* Czarny tekst wpisywany przez użytkownika */
+  width: 100%; /* Wymagane, ponieważ CF7 owija pola w tagi <span> */
+  box-sizing: border-box;
 }
 
-#kontakt form textarea{
+#kontakt form textarea {
   font-family: Inter;
   font-size: 16px;
   line-height: 150%;
-  color: #7E7E7E;
-  border: 1px solid grey;
+  color: #000000 !important; /* Czarny tekst wpisywany przez użytkownika */
+  border: 1px solid #B0B0B0;
   height: 157px;
   resize: none;
   padding-left: 10px;
   padding-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#kontakt button{
+#kontakt button,
+#kontakt input.button {
   height: 44px;
   width: 25%;
+  cursor: pointer;
 }
 
 .item {
@@ -1338,6 +1346,30 @@ footer .socials{
   line-height: 150%;
 }
 
+/* Wymuszenie pełnej szerokości dla ukrytych spanów Contact Form 7 */
+.wpcf7-form-control-wrap {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Zastąpienie usuniętych tagów <br> bezpiecznym marginesem */
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea {
+    margin-bottom: 16px;
+}
+
+#kontakt input.button {
+    padding: 0 !important;
+    line-height: 40px !important;
+}
+
+/* Szary kolor wyłącznie dla tekstów pomocniczych (placeholder) */
+#kontakt form input::placeholder,
+#kontakt form textarea::placeholder {
+    color: #7E7E7E !important;
+    opacity: 1; /* Ważne: Firefox domyślnie przyciemnia placeholdery, to wyrównuje wygląd we wszystkich przeglądarkach */
+}
+
 
 /* Responsywność */
 
@@ -1681,10 +1713,11 @@ footer .socials{
     width: 100%;
   }
 
-  #kontakt button{
-    width: 100%;
-    position: relative;
-    bottom: auto;
+  #kontakt button,
+  #kontakt input.button {
+  width: 100%;
+  position: relative;
+  bottom: auto;
   }
 
   .button{
