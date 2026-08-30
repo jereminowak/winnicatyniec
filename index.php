@@ -102,7 +102,7 @@
 				<div class="flip-card card-white-1">
 					<div id="flipper" class="flip-card-inner" onclick="void(0)">
 						<div class="flip-card-front">
-							<div class="plus-prawy"><img src="plus_light.svg"/></div>
+							<div class="plus-prawy"><img src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
 							<div class="card-content">
 								<div class="wine-photo">
 									<img src="<?php echo get_template_directory_uri(); ?>/Johanniter-1.png" class="wine-bottle">
@@ -115,7 +115,7 @@
 							</div>
 						</div>
 						<div class="flip-card-back">
-							<div class="minus-prawy"><img src="minus_light.svg"/></div>
+							<div class="minus-prawy"><img src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
 							<div class="card-content">
 								<div class="wine-info">
 									<div class="wine-info-text">
@@ -125,7 +125,7 @@
 									</div>
 								</div>
 								<div class="wine-photo">
-									<img src="Johanniter.png" class="wine-bottle back">
+									<img src="<?php echo get_template_directory_uri(); ?>/Johanniter.png" class="wine-bottle back">
 								</div>
 							</div>
 						</div>
@@ -136,10 +136,10 @@
 				<div class="flip-card card-white-2">
 					<div id="flipper1" class="flip-card-inner">
 						<div class="flip-card-front">
-							<div class="plus-lewy"><img src="plus_dark.svg"/></div>
+							<div class="plus-lewy"><img src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
 							<div class="card-content">
 								<div class="wine-photo">
-									<img src="Souvignier_Gris-1.png" class="wine-bottle">
+									<img src="<?php echo get_template_directory_uri(); ?>/Souvignier_Gris-1.png" class="wine-bottle">
 								</div>
 								<div class="wine-info">
 									<h3>Souvignier Gris</h3>
@@ -149,7 +149,7 @@
 							</div>
 						</div>
 						<div class="flip-card-back">
-							<div class="minus-lewy"><img src="minus_dark.svg"/></div>
+							<div class="minus-lewy"><img src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
 							<div class="card-content">
 								<div class="wine-info">
 									<div class="wine-info-text">
@@ -159,7 +159,7 @@
 									</div>	
 								</div>
 								<div class="wine-photo">
-									<img src="Souvignier_Gris.png" class="wine-bottle back">
+									<img src="<?php echo get_template_directory_uri(); ?>/Souvignier_Gris.png" class="wine-bottle back">
 								</div>
 							</div>
 						</div>
@@ -170,11 +170,11 @@
 				<div class="flip-card card-white-3">
 					<div id="flipper2" class="flip-card-inner">
 						<div class="flip-card-front">
-							<div class="plus-prawy"><img class="plus-mobile" src="plus_light.svg"/></div>
-							<div class="plus-prawy"><img class="plus-tablet" src="plus_dark.svg"/></div>
+							<div class="plus-prawy"><img class="plus-mobile" src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
+							<div class="plus-prawy"><img class="plus-tablet" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
 							<div class="card-content">
 								<div class="wine-photo">
-									<img src="Seyval_Blanc-1.png" class="wine-bottle">
+									<img src="<?php echo get_template_directory_uri(); ?>/Seyval_Blanc-1.png" class="wine-bottle">
 								</div>
 								<div class="wine-info">
 									<h3>Seyval Blanc</h3>
@@ -184,8 +184,8 @@
 							</div>
 						</div>
 						<div class="flip-card-back">
-							<div class="minus-prawy"><img class="minus-mobile" src="minus_light.svg"/></div>
-							<div class="minus-prawy"><img class="minus-tablet" src="minus_dark.svg"/></div>
+							<div class="minus-prawy"><img class="minus-mobile" src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
+							<div class="minus-prawy"><img class="minus-tablet" src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
 							<div class="card-content">
 								<div class="wine-info">
 									<div class="wine-info-text">
@@ -195,7 +195,7 @@
 									</div>
 								</div>
 								<div class="wine-photo">
-									<img src="Seyval_Blanc.png" class="wine-bottle back">
+									<img src="<?php echo get_template_directory_uri(); ?>/Seyval_Blanc.png" class="wine-bottle back">
 								</div>
 							</div>
 						</div>
@@ -206,10 +206,10 @@
 				<div class="flip-card card-red">
 					<div id="flipper3" class="flip-card-inner">
 						<div class="flip-card-front">
-							<div class="plus-lewy"><img src="plus_light.svg"/></div>
+							<div class="plus-lewy"><img src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
 							<div class="card-content">
 								<div class="wine-photo">
-									<img src="Cuvee_Red-1.png" class="wine-bottle back">
+									<img src="<?php echo get_template_directory_uri(); ?>/Cuvee_Red-1.png" class="wine-bottle back">
 								</div>
 								<div class="wine-info">
 									<h3>Red Cuvee</h3>
@@ -219,7 +219,7 @@
 							</div>
 						</div>
 						<div class="flip-card-back">
-							<div class="minus-lewy"><img src="minus_light.svg"/></div>
+							<div class="minus-lewy"><img src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
 							<div class="card-content">
 								<div class="wine-info">
 									<div class="wine-info-text">
@@ -229,7 +229,7 @@
 									</div>
 								</div>
 								<div class="wine-photo">
-									<img src="Cuvee_Red.png" class="wine-bottle">
+									<img src="<?php echo get_template_directory_uri(); ?>/Cuvee_Red.png" class="wine-bottle">
 								</div>
 							</div>
 						</div>
@@ -249,11 +249,11 @@
 				<div class="flip-card card-white-2">
 					<div id="flipper4" class="flip-card-inner" onclick="void(0)">
 						<div class="flip-card-front">
-							<div class="plus-lewy"><img class="plus-mobile" src="plus_dark.svg"/></div>
-							<div class="plus-prawy"><img class="plus-tablet" src="plus_dark.svg"/></div>
+							<div class="plus-lewy"><img class="plus-mobile" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
+							<div class="plus-prawy"><img class="plus-tablet" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
 							<div class="card-content">
 								<div class="wine-photo">
-									<img src="SOUVIGNIER-25-2.png" class="wine-bottle">
+									<img src="<?php echo get_template_directory_uri(); ?>/SOUVIGNIER-25-2.png" class="wine-bottle">
 								</div>
 								<div class="wine-info">
 									<h3>Souvignier Gris</h3>
@@ -263,7 +263,7 @@
 							</div>
 						</div>
 						<div class="flip-card-back">
-							<div class="minus-prawy"><img src="minus_dark.svg"/></div>
+							<div class="minus-prawy"><img src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
 							<div class="card-content">
 								<div class="wine-info">
 									<div class="wine-info-text">
@@ -273,7 +273,7 @@
 									</div>
 								</div>
 								<div class="wine-photo">
-									<img src="SOUVIGNIER-25-1.png" class="wine-bottle back">
+									<img src="<?php echo get_template_directory_uri(); ?>/SOUVIGNIER-25-1.png" class="wine-bottle back">
 								</div>
 							</div>
 						</div>
@@ -284,10 +284,10 @@
 				<div class="flip-card card-white-1">
 					<div id="flipper5" class="flip-card-inner">
 						<div class="flip-card-front">
-							<div class="plus-prawy"><img src="plus_light.svg"/></div>
+							<div class="plus-prawy"><img src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
 							<div class="card-content">
 								<div class="wine-photo">
-									<img src="SEYVAL-25-2.png" class="wine-bottle">
+									<img src="<?php echo get_template_directory_uri(); ?>/SEYVAL-25-2.png" class="wine-bottle">
 								</div>
 								<div class="wine-info">
 									<h3>Seyval Blanc</h3>
@@ -297,7 +297,7 @@
 							</div>
 						</div>
 						<div class="flip-card-back">
-							<div class="minus-lewy"><img src="minus_light.svg"/></div>
+							<div class="minus-lewy"><img src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
 							<div class="card-content">
 								<div class="wine-info">
 									<div class="wine-info-text">
@@ -307,7 +307,7 @@
 									</div>	
 								</div>
 								<div class="wine-photo">
-									<img src="SEYVAL-25-1.png" class="wine-bottle back">
+									<img src="<?php echo get_template_directory_uri(); ?>/SEYVAL-25-1.png" class="wine-bottle back">
 								</div>
 							</div>
 						</div>
@@ -318,11 +318,11 @@
 				<div class="flip-card card-white-4">
 					<div id="flipper6" class="flip-card-inner">
 						<div class="flip-card-front">
-							<div class="plus-lewy"><img class="plus-mobile" src="plus_dark.svg"/></div>
-							<div class="plus-prawy"><img class="plus-tablet" src="plus_light.svg"/></div>
+							<div class="plus-lewy"><img class="plus-mobile" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
+							<div class="plus-prawy"><img class="plus-tablet" src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
 							<div class="card-content">
 								<div class="wine-photo">
-									<img src="JOHANNITER-25-2.png" class="wine-bottle">
+									<img src="<?php echo get_template_directory_uri(); ?>/JOHANNITER-25-2.png" class="wine-bottle">
 								</div>
 								<div class="wine-info">
 									<h3>Johannniter</h3>
@@ -332,8 +332,8 @@
 							</div>
 						</div>
 						<div class="flip-card-back">
-							<div class="minus-lewy"><img class="minus-mobile" src="minus_dark.svg"/></div>
-							<div class="minus-prawy"><img class="minus-tablet" src="minus_light.svg"/></div>
+							<div class="minus-lewy"><img class="minus-mobile" src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
+							<div class="minus-prawy"><img class="minus-tablet" src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
 							<div class="card-content">
 								<div class="wine-info">
 									<div class="wine-info-text">
@@ -343,7 +343,7 @@
 									</div>
 								</div>
 								<div class="wine-photo">
-									<img src="JOHANNITER-25-1.png" class="wine-bottle back">
+									<img src="<?php echo get_template_directory_uri(); ?>/JOHANNITER-25-1.png" class="wine-bottle back">
 								</div>
 							</div>
 						</div>
@@ -354,11 +354,11 @@
 				<div class="flip-card card-rose">
 					<div id="flipper7" class="flip-card-inner">
 						<div class="flip-card-front">
-							<div class="plus-prawy"><img class="plus-mobile" src="plus_dark.svg"/></div>
-							<div class="plus-prawy"><img class="plus-tablet" src="plus_dark.svg"/></div>
+							<div class="plus-prawy"><img class="plus-mobile" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
+							<div class="plus-prawy"><img class="plus-tablet" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
 							<div class="card-content">
 								<div class="wine-photo">
-									<img src="BLUSH-2.png" class="wine-bottle">
+									<img src="<?php echo get_template_directory_uri(); ?>/BLUSH-2.png" class="wine-bottle">
 								</div>
 								<div class="wine-info">
 									<h3>Blush wine</h3>
@@ -369,8 +369,8 @@
 							</div>
 						</div>
 						<div class="flip-card-back">
-							<div class="minus-prawy"><img class="minus-mobile" src="minus_dark.svg"/></div>
-							<div class="minus-prawy"><img class="minus-tablet" src="minus_dark.svg"/></div>
+							<div class="minus-prawy"><img class="minus-mobile" src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
+							<div class="minus-prawy"><img class="minus-tablet" src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
 							<div class="card-content">
 								<div class="wine-info">
 									<div class="wine-info-text">
@@ -380,7 +380,7 @@
 									</div>
 								</div>
 								<div class="wine-photo">
-									<img src="BLUSH-1.png" class="wine-bottle back">
+									<img src="<?php echo get_template_directory_uri(); ?>/BLUSH-1.png" class="wine-bottle back">
 								</div>
 							</div>
 						</div>
@@ -391,11 +391,11 @@
 				<div class="flip-card card-white-2">
 					<div id="flipper8" class="flip-card-inner">
 						<div class="flip-card-front">
-							<div class="plus-lewy"><img class="plus-mobile" src="plus_dark.svg"/></div>
-							<div class="plus-prawy"><img class="plus-tablet" src="plus_dark.svg"/></div>
+							<div class="plus-lewy"><img class="plus-mobile" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
+							<div class="plus-prawy"><img class="plus-tablet" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
 							<div class="card-content">
 								<div class="wine-photo">
-									<img src="SOLARIS-25-2.png" class="wine-bottle back">
+									<img src="<?php echo get_template_directory_uri(); ?>/SOLARIS-25-2.png" class="wine-bottle back">
 								</div>
 								<div class="wine-info">
 									<h3>Solaris</h3>
@@ -405,8 +405,8 @@
 							</div>
 						</div>
 						<div class="flip-card-back">
-							<div class="minus-lewy"><img class="minus-mobile" src="minus_dark.svg"/></div>
-							<div class="minus-prawy"><img class="minus-tablet" src="minus_dark.svg"/></div>
+							<div class="minus-lewy"><img class="minus-mobile" src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
+							<div class="minus-prawy"><img class="minus-tablet" src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
 							<div class="card-content">
 								<div class="wine-info">
 									<div class="wine-info-text">
@@ -416,7 +416,7 @@
 									</div>
 								</div>
 								<div class="wine-photo">
-									<img src="SOLARIS-25-1.png" class="wine-bottle">
+									<img src="<?php echo get_template_directory_uri(); ?>/SOLARIS-25-1.png" class="wine-bottle">
 								</div>
 							</div>
 						</div>
@@ -427,11 +427,11 @@
 				<div class="flip-card card-white-1">
 					<div id="flipper9" class="flip-card-inner">
 						<div class="flip-card-front">
-							<div class="plus-prawy"><img class="plus-mobile" src="plus_light.svg"/></div>
-							<div class="plus-prawy"><img class="plus-tablet" src="plus_light.svg"/></div>
+							<div class="plus-prawy"><img class="plus-mobile" src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
+							<div class="plus-prawy"><img class="plus-tablet" src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
 							<div class="card-content">
 								<div class="wine-photo">
-									<img src="GAS-2.png" class="wine-bottle">
+									<img src="<?php echo get_template_directory_uri(); ?>/GAS-2.png" class="wine-bottle">
 								</div>
 								<div class="wine-info">
 									<h3>Gas and Roll</h3>
@@ -441,18 +441,18 @@
 							</div>
 						</div>
 						<div class="flip-card-back">
-							<div class="minus-prawy"><img class="minus-mobile" src="minus_light.svg"/></div>
-							<div class="minus-prawy"><img class="minus-tablet" src="minus_light.svg"/></div>
+							<div class="minus-prawy"><img class="minus-mobile" src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
+							<div class="minus-prawy"><img class="minus-tablet" src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
 							<div class="card-content">
 								<div class="wine-info">
 									<div class="wine-info-text">
 										<h3>Gas and Roll</h3>
 										<h4>Białe wytrawne</h4>
-										<p>Zbalnasowane, o subiektywnym profilu aromatycznym. Delikatna kwasowość, zielone owoce, kremowa tekstura, kredowo-mineralny akcent.</p>
+										<p>Zbalansowane, o subiektywnym profilu aromatycznym. Delikatna kwasowość, zielone owoce, kremowa tekstura, kredowo-mineralny akcent.</p>
 									</div>
 								</div>
 								<div class="wine-photo">
-									<img src="GAS-1.png" class="wine-bottle back">
+									<img src="<?php echo get_template_directory_uri(); ?>/GAS-1.png" class="wine-bottle back">
 								</div>
 							</div>
 						</div>
@@ -692,8 +692,8 @@
 	<section id="dofinansowania">
 		<div class="container">
 			<div class="section-logos">
-				<img class="komp" src="logoKPO.jpeg"/>
-				<img class="mobilka" src="logoKPOpion.png"/>
+				<img class="komp" src="<?php echo get_template_directory_uri(); ?>/logoKPO.jpeg"/>
+				<img class="mobilka" src="<?php echo get_template_directory_uri(); ?>/logoKPOpion.png"/>
 			</div>
 			<div class="section-text-dof">
 				<p>Winnica Tyniec s.c. realizuje przedsięwzięcie w ramach Krajowego Programu Odbudowy - działania/części inwestycji A1.4.1. „Inwestycje na rzecz dywersyfikacji i skracania łańcucha dostaw produktów rolnych i spożywczych oraz budowy odporności podmiotów uczestniczących w łańcuchu”- wsparcia dla mikro-, małych i średnich przedsiębiorstw na wykonywanie działalności w zakresie przetwórstwa lub wprowadzania do obrotu produktów rolnych, rybołówstwa lub akwakultury.
@@ -708,7 +708,7 @@ Wysokość wkładu Funduszy Europejskich: 376 771,06 PLN</p>
 		<div class="topfoot">
 			<div class="dane">
 				<div class="logo">
-					<img src="WT-sygnet-03.svg"/>
+					<img src="<?php echo get_template_directory_uri(); ?>/WT-sygnet-03.svg"/>
 				</div>
 				<div class="tekst">
 					<p class="main">Winnica Tyniec</p>
@@ -718,10 +718,10 @@ Wysokość wkładu Funduszy Europejskich: 376 771,06 PLN</p>
 			</div>
 			<div class="socials">
 				<div class="facebook">
-					<a href="https://www.facebook.com/WinnicaTyniec/" target="_blank"><img src="facebook-logo-1.svg"/></a>
+					<a href="https://www.facebook.com/WinnicaTyniec/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/facebook-logo-1.svg"/></a>
 				</div>
 				<div class="instagram">
-					<a href="https://www.instagram.com/winnicatyniec/" target="_blank"><img src="instagram-logo-1.svg"/></a>
+					<a href="https://www.instagram.com/winnicatyniec/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/instagram-logo-1.svg"/></a>
 				</div>
 			</div>
 		</div>
