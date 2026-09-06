@@ -3,6 +3,15 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+// --- PUŁAPKA NA BOTY (HONEYPOT) ---
+// Jeśli pole-pułapka nie jest puste, to jest to bot.
+if (!empty($_POST['company_fax'])) {
+    http_response_code(200);
+    echo "success"; // Udajemy sukces, żeby bot nie próbował innych metod
+    exit;
+}
+// ----------------------------------
+
 $to = "kasia.kula@winnicatyniec.pl";
 $subject = "Nowa wiadomosc z formularza";
 

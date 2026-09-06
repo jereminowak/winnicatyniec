@@ -661,6 +661,11 @@
 						<input type="text" name="name" placeholder="Imię i nazwisko" required><br>
 						<input type="email" name="email" placeholder="Adres e-mail" required><br>
 						<input type="tel" name="phone" placeholder="Numer telefonu"><br>
+
+						<div style="position: absolute; left: -9999px; top: -9999px; opacity: 0; pointer-events: none;" aria-hidden="true">
+							<input type="text" name="company_fax" tabindex="-1" autocomplete="off">
+						</div>
+
 						<textarea name="message" placeholder="Treść wiadomości" required></textarea><br>
 						<!-- <div class="rodo-container" style="margin-bottom: 15px; font-size: 14px;">
 							<input class="checkbox" type="checkbox" name="rodo" id="rodo" required>
