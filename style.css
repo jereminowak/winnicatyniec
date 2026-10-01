@@ -600,48 +600,11 @@ img {
   display: block;
 }
 
-.carousel {
-  display: flex;
-  flex-wrap: wrap;
-  /* align-items: flex-start; */
-  /* justify-content: space-between; */
-  /* gap: 16px 16px; */
-  position: relative;
-  height: 1600px;
-}
 
-.carousel-2 {
-  display: flex;
-  flex-wrap: wrap;
-  /* align-items: flex-start; */
-  /* justify-content: space-between; */
-  /* gap: 16px 16px; */
-  position: relative;
-  height: 1100px;
-}
 
-.flip-wrapper{
-  display: flex;
-  flex-direction: row;
-  width: 50%;
-  align-items: center;
-  justify-content: center;
-  /* gap: 4px; */
-  position: relative;
-  /* padding: 8px 4px; */
-  border-radius: 8px;
 
-  /* width: 200px; */
-  height: 33.333%;
-  margin: 0;
-  padding: 0;
-  /* perspective: 1000px; efekt 3D */
-  cursor: default;
-}
 
-.carousel-2 .flip-wrapper{
-  height: 50%;
-}
+
 
 .flip-card {
   width: 100%;
@@ -664,6 +627,29 @@ img {
   user-select: none;
 }
 
+/* Kontener na wina - sam dobiera wysokość */
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+
+/* Pojedyncza karta wina (stała wysokość 550px) */
+.carousel .flip-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 550px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 8px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
 @media(hover: none){
   .flip-card-inner.is-flipped{
     transform: rotateY(180deg);
@@ -675,7 +661,7 @@ img {
 }
 
 @media(hover: hover){
-.flip-wrapper:hover .flip-card-inner{
+.flip-wrapper:hover .flip-card .flip-card-inner{
   transform: rotateY(180deg);
 }
 }
@@ -702,13 +688,13 @@ img {
   transform: rotateY(0deg) translateY(1px);
 }
 
-.card-white-1 p, .card-white-4 p, .card-red p{
+/* .card-white-1 p, .card-white-4 p, .card-red p{
   color: #EAE4D6;
 }
 
 .card-white-2 p, .card-white-3 p, .card-rose p{
   color: #780A28;
-}
+} */
 
 .flip-card-front .card-content {
   display: flex;
@@ -838,7 +824,7 @@ img {
   transform: rotateY(180deg) translateZ(1px);
 }
 
-.card-white-4{
+/* .card-white-4{
   background: #736B56;
   color: #EAE4D6;
 }
@@ -866,7 +852,7 @@ img {
 .card-rose{
   background: #EDE0DC;
   color: #780A28;
-}
+} */
 
 .wine-badges {
   display: flex;
@@ -1286,28 +1272,28 @@ footer .socials{
   overflow: hidden;
 }
 
-.plus-prawy{
+.plus-layout-left{
   display: none;
   position: absolute;
   right: 15px;
   top: 15px;
 }
 
-.plus-lewy{
+.plus-layout-right{
   display: none;
   position: absolute;
   left: 15px;
   top: 15px;
 }
 
-.minus-lewy{
+.minus-layout-right{
   display: none;
   position: absolute;
   left: 15px;
   top: 15px;
 }
 
-.minus-prawy{
+.minus-layout-left{
   display: none;
   position: absolute;
   right: 15px;
@@ -1370,12 +1356,27 @@ footer .socials{
     opacity: 1; /* Ważne: Firefox domyślnie przyciemnia placeholdery, to wyrównuje wygląd we wszystkich przeglądarkach */
 }
 
+/* --- KOLORY KART WINA --- */
+.bg-light { background: #EAE4D6; color: #780A28; }
+.bg-light p { color: #780A28; }
+
+.bg-gray { background: #736B56; color: #EAE4D6; }
+.bg-gray p { color: #EAE4D6; }
+
+.bg-red { background: #780A28; color: #EAE4D6; }
+.bg-red p { color: #EAE4D6; }
+
+.bg-rose { background: #EDE0DC; color: #780A28; }
+.bg-rose p { color: #780A28; }
+
 
 /* Responsywność */
 
 /*TABLET*/
 
 @media (max-width: 1024px) {
+  .carousel .flip-wrapper { height: 450px; }
+
   body, html {
     font-size: 16px;
     line-height: 20px;
@@ -1408,12 +1409,7 @@ footer .socials{
     font-size: 16px;
     padding: 12px;
   }
-  .carousel{
-    height: 1200px;
-  }
-  .carousel-2{
-    height: 800px;
-  }
+  
   .wine-info h3{
     font-size: 25px;
   }
@@ -1423,19 +1419,19 @@ footer .socials{
   .statement{
     background-attachment: scroll;
   }
-  .plus-prawy{
+  .plus-layout-left{
     display: block;
   }
 
-  .plus-lewy{
+  .plus-layout-right{
     display: block;
   }
 
-  .minus-prawy{
+  .minus-layout-left{
     display: block;
   }
 
-  .minus-lewy{
+  .minus-layout-right{
     display: block;
   }
 
@@ -1455,9 +1451,7 @@ footer .socials{
     display: flex;
   }
 
-  .flip-wrapper{
-    cursor: pointer;
-  }
+  
 }
 
 /*MOBILE*/
@@ -1467,6 +1461,11 @@ footer .socials{
   body, html {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .carousel .flip-wrapper {
+    width: 100%;
+    height: 400px;
   }
 
   .main-title{
@@ -1543,23 +1542,11 @@ footer .socials{
     padding-right: 20px;
   }
 
-  .carousel{
-    height: 1800px;
-  }
+  
 
-  .carousel-2{
-    height: 1440px;
-  }
+  
 
-  #wina .flip-wrapper{
-    width: 100%;
-    height: 20%;
-  }
-
-  #wina .carousel-2 .flip-wrapper{
-    width: 100%;
-    height: 25%;
-  }
+  
 
   #wina .button{
     width: 45%;
@@ -1651,9 +1638,24 @@ footer .socials{
     color: #780A28;
   }
 
-  .card-white-2 .card-content{
+  .layout-right .card-content {
     flex-direction: row-reverse;
   }
+  .layout-right .wine-info {
+    text-align: right;
+  }
+  .layout-right .wine-info .wine-info-text {
+    right: auto;
+    left: 0;
+  }
+  .layout-right .wine-bottle {
+    right: auto;
+    left: 2rem;
+  }
+
+  /* .card-white-2 .card-content{
+    flex-direction: row-reverse;
+  } */
 
   .card-white-2 .wine-info{
     text-align: right;
@@ -1664,9 +1666,9 @@ footer .socials{
     left: 0;
   }
 
-  .card-white-4 .card-content{
+  /* .card-white-4 .card-content{
     flex-direction: row-reverse;
-  }
+  } */
 
   .card-white-4 .wine-info{
     text-align: right;
@@ -1677,9 +1679,9 @@ footer .socials{
     left: 0;
   }
 
-  .card-red .card-content{
+  /* .card-red .card-content{
     flex-direction: row-reverse;
-  }
+  } */
 
   .card-red .wine-info{
     text-align: right;
@@ -1882,13 +1884,13 @@ footer .socials{
 }
 
 @media (max-width: 600px){
-  .carousel{
+  /* .carousel{
     height: 1400px;
   }
 
   .carousel-2{
     height: 1120px;
-  }
+  } */
 
   /* .flip-card-inner.is-flipped{
   transform: rotateY(180deg);

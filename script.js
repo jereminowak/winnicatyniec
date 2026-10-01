@@ -31,104 +31,22 @@ window.addEventListener('scroll', function () {
   
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Wyłapujemy wszystkie wewnętrzne kontenery kart na stronie
+    const flipCards = document.querySelectorAll('.flip-card-inner');
+    
+    flipCards.forEach(function(card) {
+        card.addEventListener('click', function() {
+            // Po kliknięciu dodajemy/usuwamy klasę 'is-flipped' do konkretnej karty
+            this.classList.toggle('is-flipped');
+        });
+    });
+});
+
 const mobNav = document.getElementById("mobile-nav");
 const topNav = document.getElementById("top-nav");
-const flipcard = document.getElementById("flipper");
-const flipcard1 = document.getElementById("flipper1");
-const flipcard2 = document.getElementById("flipper2");
-const flipcard3 = document.getElementById("flipper3");
-const flipcard4 = document.getElementById("flipper4");
-const flipcard5 = document.getElementById("flipper5");
-const flipcard6 = document.getElementById("flipper6");
-const flipcard7 = document.getElementById("flipper7");
-const flipcard8 = document.getElementById("flipper8");
-const flipcard9 = document.getElementById("flipper9");
 
-flipcard.addEventListener('click', function(){
 
-  this.classList.toggle("is-flipped");
-});
-
-flipcard1.addEventListener('click', function(){
-
-  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
-
-  if(isTouchDevice){
-    this.classList.toggle("is-flipped");
-  }
-});
-
-flipcard2.addEventListener('click', function(){
-
-  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
-
-  if(isTouchDevice){
-    this.classList.toggle("is-flipped");
-  }
-});
-
-flipcard3.addEventListener('click', function(){
-
-  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
-
-  if(isTouchDevice){
-    this.classList.toggle("is-flipped");
-  }
-});
-
-flipcard4.addEventListener('click', function(){
-
-  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
-
-  if(isTouchDevice){
-    this.classList.toggle("is-flipped");
-  }
-});
-
-flipcard5.addEventListener('click', function(){
-
-  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
-
-  if(isTouchDevice){
-    this.classList.toggle("is-flipped");
-  }
-});
-
-flipcard6.addEventListener('click', function(){
-
-  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
-
-  if(isTouchDevice){
-    this.classList.toggle("is-flipped");
-  }
-});
-
-flipcard7.addEventListener('click', function(){
-
-  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
-
-  if(isTouchDevice){
-    this.classList.toggle("is-flipped");
-  }
-});
-
-flipcard8.addEventListener('click', function(){
-
-  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
-
-  if(isTouchDevice){
-    this.classList.toggle("is-flipped");
-  }
-});
-
-flipcard9.addEventListener('click', function(){
-
-  const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
-
-  if(isTouchDevice){
-    this.classList.toggle("is-flipped");
-  }
-});
 
 document.getElementById("burgerBtn").onclick = function(){
   window.scrollTo({top: 0, behavior: 'smooth'});

@@ -33,382 +33,113 @@
 	</section>
 	
 	<section class="wina" id="wina">
-	  <div class="container">
-		<div class="section-head">
-			<h2 class="section-title">Wino</h2>
-			<h3 class="section-title2">ROCZNIK 2024</p>
-			<!-- <a class="link-btn">Poznaj nasze wina<div class="btn-icon"></div>
-			</a> -->
-		</div>
+		<div class="container">
+		<?php
+		// Pobieramy wszystkie wina i sortujemy od najnowszego rocznika
+		$wina = new WP_Query(array(
+			'post_type'      => 'wina',
+			'posts_per_page' => -1,          // -1 pobiera wszystkie
+			'meta_key'       => 'rocznik',   // Sortujemy po polu z ACF
+			'orderby'        => 'meta_value_num',
+			'order'          => 'DESC'       // Od najwyższego (np. 2026 -> 2025)
+		));
 
-		<div class="carousel-2">
-			<div class="flip-wrapper">
-				<div class="flip-card card-white-1">
-					<div id="flipper" class="flip-card-inner" onclick="void(0)">
-						<div class="flip-card-front">
-							<div class="plus-prawy"><img src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
-							<div class="card-content">
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/Johanniter-1.png" class="wine-bottle">
-								</div>
-								<div class="wine-info">
-									<h3>Johanniter</h3>
-									<h4>Białe wytrawne</h4>
-									<p>APERITIF</p>
-								</div>
-							</div>
-						</div>
-						<div class="flip-card-back">
-							<div class="minus-prawy"><img src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
-							<div class="card-content">
-								<div class="wine-info">
-									<div class="wine-info-text">
-										<h3>Johanniter</h3>
-										<h4>Białe wytrawne</h4>
-										<p>Cytrusy, białe kwiaty (jaśmin), morela, brzoskwinia. Mineralny finisz z nutą goryczki.</p>
-									</div>
-								</div>
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/Johanniter.png" class="wine-bottle back">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="flip-wrapper">
-				<div class="flip-card card-white-2">
-					<div id="flipper1" class="flip-card-inner">
-						<div class="flip-card-front">
-							<div class="plus-lewy"><img src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
-							<div class="card-content">
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/Souvignier_Gris-1.png" class="wine-bottle">
-								</div>
-								<div class="wine-info">
-									<h3>Souvignier Gris</h3>
-									<h4>Białe wytrawne</h4>
-									<p>STRUKTURALNE</p>
-								</div>
-							</div>
-						</div>
-						<div class="flip-card-back">
-							<div class="minus-lewy"><img src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
-							<div class="card-content">
-								<div class="wine-info">
-									<div class="wine-info-text">
-										<h3>Souvignier Gris</h3>
-										<h4>Białe wytrawne</h4>
-										<p>Grejpfrut, gruszka, morwa; nuty świeżych orzechów włoskich. Pikantny finisz w barwach kolorowego pieprzu. </p>
-									</div>	
-								</div>
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/Souvignier_Gris.png" class="wine-bottle back">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="flip-wrapper">
-				<div class="flip-card card-white-3">
-					<div id="flipper2" class="flip-card-inner">
-						<div class="flip-card-front">
-							<div class="plus-prawy"><img class="plus-mobile" src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
-							<div class="plus-prawy"><img class="plus-tablet" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
-							<div class="card-content">
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/Seyval_Blanc-1.png" class="wine-bottle">
-								</div>
-								<div class="wine-info">
-									<h3>Seyval Blanc</h3>
-									<h4>Białe półwytrawne</h4>
-									<p>RZEŚKIE</p>
-								</div>
-							</div>
-						</div>
-						<div class="flip-card-back">
-							<div class="minus-prawy"><img class="minus-mobile" src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
-							<div class="minus-prawy"><img class="minus-tablet" src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
-							<div class="card-content">
-								<div class="wine-info">
-									<div class="wine-info-text">
-										<h3>Seyval Blanc</h3>
-										<h4>Białe półwytrawne</h4>
-										<p>W nosie polne kwiaty i zioła. W ustach słodsze cytrusy, mirabelka, skórka cytrynowa.</p>
-									</div>
-								</div>
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/Seyval_Blanc.png" class="wine-bottle back">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="flip-wrapper">
-				<div class="flip-card card-red">
-					<div id="flipper3" class="flip-card-inner">
-						<div class="flip-card-front">
-							<div class="plus-lewy"><img src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
-							<div class="card-content">
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/Cuvee_Red-1.png" class="wine-bottle back">
-								</div>
-								<div class="wine-info">
-									<h3>Red Cuvee</h3>
-									<h4>Czerwone wytrawne</h4>
-									<p>Regent | Cabertner Cortis | Zweigelt</p>
-								</div>
-							</div>
-						</div>
-						<div class="flip-card-back">
-							<div class="minus-lewy"><img src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
-							<div class="card-content">
-								<div class="wine-info">
-									<div class="wine-info-text">
-										<h3>Red Cuvee</h3>
-										<h4>Czerwone wytrawne</h4>
-										<p>W nosie skóra, ziołowe nuty. W ustach owoce leśne, miękkie taniny. W bukiecie słodka nuta wanilii i pieprz.</p>
-									</div>
-								</div>
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/Cuvee_Red.png" class="wine-bottle">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		$aktualny_rocznik = '';
+		$czy_pierwszy_rocznik = true;
 
-		<div class="section-head-mid">
-			<h3 class="section-title2">ROCZNIK 2025</p>
-			<!-- <a class="link-btn">Poznaj nasze wina<div class="btn-icon"></div>
-			</a> -->
-		</div>
+		if ( $wina->have_posts() ) : 
+			while ( $wina->have_posts() ) : $wina->the_post(); 
+				
+				$rocznik = get_field('rocznik');
+				
+				// Zabezpieczenie: jeśli wino nie ma przypisanego rocznika, wpisujemy domyślny
+				if ( empty($rocznik) ) $rocznik = 'Brak rocznika';
 
-		<div class="carousel">
-			<div class="flip-wrapper">
-				<div class="flip-card card-white-2">
-					<div id="flipper4" class="flip-card-inner" onclick="void(0)">
-						<div class="flip-card-front">
-							<div class="plus-lewy"><img class="plus-mobile" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
-							<div class="plus-prawy"><img class="plus-tablet" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
-							<div class="card-content">
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/SOUVIGNIER-25-2.png" class="wine-bottle">
-								</div>
-								<div class="wine-info">
-									<h3>Souvignier Gris</h3>
-									<h4>Białe wytrawne</h4>
-									<p>ETERYCZNE</p>
-								</div>
-							</div>
-						</div>
-						<div class="flip-card-back">
-							<div class="minus-prawy"><img src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
-							<div class="card-content">
-								<div class="wine-info">
-									<div class="wine-info-text">
-										<h3>Souvignier Gris</h3>
-										<h4>Białe wytrawne</h4>
-										<p>Zwiewne i eleganckie, delikatnie cytrusowe.</p>
-									</div>
-								</div>
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/SOUVIGNIER-25-1.png" class="wine-bottle back">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="flip-wrapper">
-				<div class="flip-card card-white-1">
-					<div id="flipper5" class="flip-card-inner">
-						<div class="flip-card-front">
-							<div class="plus-prawy"><img src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
-							<div class="card-content">
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/SEYVAL-25-2.png" class="wine-bottle">
-								</div>
-								<div class="wine-info">
-									<h3>Seyval Blanc</h3>
-									<h4>Białe wytrawne</h4>
-									<p>DOJRZEWAJĄCE NA OSADZIE</p>
-								</div>
-							</div>
-						</div>
-						<div class="flip-card-back">
-							<div class="minus-lewy"><img src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
-							<div class="card-content">
-								<div class="wine-info">
-									<div class="wine-info-text">
-										<h3>Seyval Blanc</h3>
-										<h4>Białe wytrawne</h4>
-										<p>Pieczone jabłko; jaśmin i polne zioła; nuty kokosa, migdałów, wanilii. Delikatnie taniczne. Kilkumiesięczne dojrzewanie na osadzie drożdżowym.</p>
-									</div>	
-								</div>
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/SEYVAL-25-1.png" class="wine-bottle back">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="flip-wrapper">
-				<div class="flip-card card-white-4">
-					<div id="flipper6" class="flip-card-inner">
-						<div class="flip-card-front">
-							<div class="plus-lewy"><img class="plus-mobile" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
-							<div class="plus-prawy"><img class="plus-tablet" src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
-							<div class="card-content">
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/JOHANNITER-25-2.png" class="wine-bottle">
-								</div>
-								<div class="wine-info">
-									<h3>Johannniter</h3>
-									<h4>Białe wytrawne</h4>
-									<p>WIBRACYJNE</p>
-								</div>
-							</div>
-						</div>
-						<div class="flip-card-back">
-							<div class="minus-lewy"><img class="minus-mobile" src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
-							<div class="minus-prawy"><img class="minus-tablet" src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
-							<div class="card-content">
-								<div class="wine-info">
-									<div class="wine-info-text">
-										<h3>Johannniter</h3>
-										<h4>Białe wytrawne</h4>
-										<p>Cytrusy, nuty zielonego jabłka i zielonej gruszki.</p>
-									</div>
-								</div>
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/JOHANNITER-25-1.png" class="wine-bottle back">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="flip-wrapper">
-				<div class="flip-card card-rose">
-					<div id="flipper7" class="flip-card-inner">
-						<div class="flip-card-front">
-							<div class="plus-prawy"><img class="plus-mobile" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
-							<div class="plus-prawy"><img class="plus-tablet" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
-							<div class="card-content">
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/BLUSH-2.png" class="wine-bottle">
-								</div>
-								<div class="wine-info">
-									<h3>Blush wine</h3>
-									<h4>Różowe wytrawne</h4>
-									<p>PROMIENNE</p>
-									<p>z odmian Regent i Cabernet Cortis</p>
-								</div>
-							</div>
-						</div>
-						<div class="flip-card-back">
-							<div class="minus-prawy"><img class="minus-mobile" src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
-							<div class="minus-prawy"><img class="minus-tablet" src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
-							<div class="card-content">
-								<div class="wine-info">
-									<div class="wine-info-text">
-										<h3>Blush wine</h3>
-										<h4>Różowe wytrawne</h4>
-										<p>Cuvee z odmian Regent i Cabernet Cortis w proporcjach 60/40; truskawka, żurawina, granat, kolorowe kwiaty.</p>
-									</div>
-								</div>
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/BLUSH-1.png" class="wine-bottle back">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="flip-wrapper">
-				<div class="flip-card card-white-2">
-					<div id="flipper8" class="flip-card-inner">
-						<div class="flip-card-front">
-							<div class="plus-lewy"><img class="plus-mobile" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
-							<div class="plus-prawy"><img class="plus-tablet" src="<?php echo get_template_directory_uri(); ?>/plus_dark.svg"/></div>
-							<div class="card-content">
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/SOLARIS-25-2.png" class="wine-bottle back">
-								</div>
-								<div class="wine-info">
-									<h3>Solaris</h3>
-									<h4>Białe półwytrawne</h4>
-									<p>AKSAMITNE</p>
-								</div>
-							</div>
-						</div>
-						<div class="flip-card-back">
-							<div class="minus-lewy"><img class="minus-mobile" src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
-							<div class="minus-prawy"><img class="minus-tablet" src="<?php echo get_template_directory_uri(); ?>/minus_dark.svg"/></div>
-							<div class="card-content">
-								<div class="wine-info">
-									<div class="wine-info-text">
-										<h3>Solaris</h3>
-										<h4>Białe półwytrawne</h4>
-										<p>Pełne, gładkie w ustach, wyraźnie słodkie; smaki i aromaty owoców egzotycznych (mango, brzoskwinia, melon, ananas, morela).</p>
-									</div>
-								</div>
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/SOLARIS-25-1.png" class="wine-bottle">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="flip-wrapper">
-				<div class="flip-card card-white-1">
-					<div id="flipper9" class="flip-card-inner">
-						<div class="flip-card-front">
-							<div class="plus-prawy"><img class="plus-mobile" src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
-							<div class="plus-prawy"><img class="plus-tablet" src="<?php echo get_template_directory_uri(); ?>/plus_light.svg"/></div>
-							<div class="card-content">
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/GAS-2.png" class="wine-bottle">
-								</div>
-								<div class="wine-info">
-									<h3>Gas and Roll</h3>
-									<h4>Białe wytrawne</h4>
-									<p>PERLIŚCIE GAZOWANE</p>
-								</div>
-							</div>
-						</div>
-						<div class="flip-card-back">
-							<div class="minus-prawy"><img class="minus-mobile" src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
-							<div class="minus-prawy"><img class="minus-tablet" src="<?php echo get_template_directory_uri(); ?>/minus_light.svg"/></div>
-							<div class="card-content">
-								<div class="wine-info">
-									<div class="wine-info-text">
-										<h3>Gas and Roll</h3>
-										<h4>Białe wytrawne</h4>
-										<p>Zbalansowane, o subiektywnym profilu aromatycznym. Delikatna kwasowość, zielone owoce, kremowa tekstura, kredowo-mineralny akcent.</p>
-									</div>
-								</div>
-								<div class="wine-photo">
-									<img src="<?php echo get_template_directory_uri(); ?>/GAS-1.png" class="wine-bottle back">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+				// Jeśli PHP wykryje, że rocznik wina różni się od poprzedniego (lub to pierwsze wino)
+				if ( $rocznik != $aktualny_rocznik ) {
+					
+					// Jeśli to nie jest pierwszy przebieg, musimy zamknąć poprzedni kontener kart
+					if ( ! $czy_pierwszy_rocznik ) {
+						echo '</div>'; 
+					}
+					
+					$aktualny_rocznik = $rocznik;
+					
+					// Generujemy nagłówki
+					if ( $czy_pierwszy_rocznik ) {
+						// Wygląd dla pierwszego nagłówka (z głównym tytułem "Wino")
+						echo '<div class="section-head">';
+						echo '<h2 class="section-title">Wino</h2>';
+						echo '<h3 class="section-title2">ROCZNIK ' . esc_html($rocznik) . '</h3>';
+						echo '</div>';
+						$czy_pierwszy_rocznik = false;
+					} else {
+						// Wygląd dla każdego kolejnego nagłówka (tylko rok)
+						echo '<div class="section-head-mid">';
+						echo '<h3 class="section-title2">ROCZNIK ' . esc_html($rocznik) . '</h3>';
+						echo '</div>';
+					}
+					
+					// Otwieramy nowy elastyczny kontener dla tego rocznika
+					echo '<div class="carousel">';
+				}
 
-		<!--<button class="button">
-				Dowiedz się więcej
-		</button> -->
-	  </div>
+				// --- ZACIĄGNIĘCIE DANYCH KARTY (z poprzedniego kodu) ---
+				$kolor = get_field('kolor_karty');
+				$uklad = get_field('uklad_karty');
+				$icon_color = ($kolor == 'bg-light' || $kolor == 'bg-rose') ? 'dark' : 'light';
+				?>
+				
+				<div class="flip-wrapper">
+					<div class="flip-card <?php echo esc_attr($kolor); ?> <?php echo esc_attr($uklad); ?>">
+						<div class="flip-card-inner">
+							
+							<div class="flip-card-front">
+								<div class="plus-<?php echo $uklad; ?>">
+									<img src="<?php echo get_template_directory_uri(); ?>/plus_<?php echo $icon_color; ?>.svg"/>
+								</div>
+								<div class="card-content">
+									<div class="wine-photo">
+										<img src="<?php the_field('zdjecie_butelki_przod'); ?>" class="wine-bottle">
+									</div>
+									<div class="wine-info">
+										<h3><?php the_title(); ?></h3>
+										<h4><?php the_field('rodzaj_wina'); ?></h4>
+										<p><?php the_field('krotkie_haslo_przod'); ?></p>
+									</div>
+								</div>
+							</div>
+
+							<div class="flip-card-back">
+								<div class="minus-<?php echo $uklad; ?>">
+									<img src="<?php echo get_template_directory_uri(); ?>/minus_<?php echo $icon_color; ?>.svg"/>
+								</div>
+								<div class="card-content">
+									<div class="wine-info">
+										<div class="wine-info-text">
+											<h3><?php the_title(); ?></h3>
+											<h4><?php the_field('rodzaj_wina'); ?></h4>
+											<p><?php the_field('opis_z_tylu_karty'); ?></p>
+										</div>
+									</div>
+									<div class="wine-photo">
+										<img src="<?php the_field('zdjecie_butelki_tyl'); ?>" class="wine-bottle back">
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			<?php endwhile; 
+			
+			// Na samym końcu zamykamy ostatni kontener z kartami
+			echo '</div>'; 
+			wp_reset_postdata(); 
+		endif; 
+		?>
+		</div>
 	</section>
 
 	<section class="kalendarz" id="kalendarz">
