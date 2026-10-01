@@ -792,6 +792,7 @@ img {
   line-height: 120%;
   text-transform: uppercase;
   margin: 0 0 8px 0;
+  /* padding-right: 40px; */
 }
 
 .wine-info h4{
@@ -1636,6 +1637,20 @@ footer .socials{
   .card-white-4 .wine-info .wine-info-text{
     right: auto;
     left: 0;
+  }
+
+  #flipper11 .card-content{
+    flex-direction: row;
+  }
+
+  #flipper11 .flip-card-front .wine-info{
+    text-align: left;
+  }
+
+  #flipper11 .wine-info-text{
+    right: 0;
+    left: auto;
+    text-align: left;
   }
 
   .card-red .card-content{
