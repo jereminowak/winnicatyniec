@@ -1929,3 +1929,130 @@ footer .socials{
       height: 420px;
   }
 }
+
+
+
+/* =========================================
+   VOUCHERY PREZENTOWE
+   ========================================= */
+
+   .vouchery {
+    width: 100%;
+    min-height: 550px;
+    padding: 90px 80px 70px;
+    color: #9b123b;
+    flex-direction: flex;
+}
+
+#vouchery .section-photo{
+  display: flex;
+  flex-direction:row;
+  gap: 80px;
+}
+
+#vouchery .section-head{
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.vouchery-grid {
+    width: 100%;
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.voucher-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px 0;
+}
+
+.voucher-item h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #9b123b;
+    letter-spacing: 1px;
+}
+
+#vouchery img{
+  width: 40%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  display: block;
+}
+
+#vouchery p{
+  max-width: 1000px;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+    .vouchery {
+        min-height: 700px;
+        padding: 70px 30px 60px;
+    }
+
+    .voucher-item {
+      padding: 8px 0;
+  }
+
+    .voucher-item h3 {
+        font-size: 20px;
+    }
+
+    #vouchery .section-photo{
+      gap: 16px;
+    }
+
+    #vouchery img{
+      width: 40%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .vouchery {
+        min-height: auto;
+        padding: 40px 20px 20px;
+    }
+
+    .vouchery-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .voucher-item h3 {
+        font-size: 18px;
+    }
+
+    .voucher-item {
+      padding: 4px 0;
+  }
+
+    #vouchery .section-photo{
+      flex-direction:column;
+      gap: 16px;
+      align-items: center;
+    }
+
+    #vouchery img{
+      width: 60%;
+    }
+}

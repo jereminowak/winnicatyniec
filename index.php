@@ -161,6 +161,38 @@
 		</div>
 	</section>
 
+	<section class="vouchery" id="vouchery">
+		<h2 class="section-title"><?php the_field('vouchery_tytul'); ?></h2>
+		
+		<!-- ACF (WYSIWYG) samo dodaje tagi <p>, więc nie musimy ich pisać w kodzie -->
+		<?php the_field('vouchery_opis_glowny'); ?>
+		
+		<div class="section-photo">
+			<div class="section-head">
+				<div class="vouchery-grid">
+					
+					<div class="voucher-item">
+						<h3><?php the_field('voucher_1_tytul'); ?></h3>
+						<p><?php the_field('voucher_1_opis'); ?></p>
+					</div>
+
+					<div class="voucher-item">
+						<h3><?php the_field('voucher_2_tytul'); ?></h3>
+						<p><?php the_field('voucher_2_opis'); ?></p>
+					</div>
+					
+				</div>
+			</div>
+			
+			<?php if( get_field('vouchery_zdjecie') ): ?>
+				<img src="<?php the_field('vouchery_zdjecie'); ?>" alt="Vouchery prezentowe">
+			<?php endif; ?>
+			
+		</div>
+		
+		<?php the_field('vouchery_tekst_dolny'); ?>
+	</section>
+
 	<section class="kalendarz" id="kalendarz">
 		<div class="section-head">
 			<h2 class="section-title">Kalendarz wydarzeń</h2>
