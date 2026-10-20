@@ -46,6 +46,8 @@
 
 		$aktualny_rocznik = '';
 		$czy_pierwszy_rocznik = true;
+		$licznik_win_w_roczniku = 0; // Dodajemy licznik kart
+		$ostatni_kolor = '';         // Zapamiętujemy kolor dla pustej karty
 
 		if ( $wina->have_posts() ) : 
 			while ( $wina->have_posts() ) : $wina->the_post(); 
@@ -60,10 +62,17 @@
 					
 					// Jeśli to nie jest pierwszy przebieg, musimy zamknąć poprzedni kontener kart
 					if ( ! $czy_pierwszy_rocznik ) {
-						echo '</div>'; 
+						// SPRAWDZENIE: Czy poprzedni rocznik miał nieparzystą liczbę win?
+						if ( $licznik_win_w_roczniku % 2 != 0 ) {
+							// Dodajemy pustą kartę wypełniającą w kolorze ostatniego wina
+							echo '<div class="flip-wrapper placeholder-card"><div class="flip-card ' . esc_attr($ostatni_kolor) . '"></div></div>';
+						}
+						
+						echo '</div>'; // Zamykamy poprzedni .carousel 
 					}
 					
 					$aktualny_rocznik = $rocznik;
+					$licznik_win_w_roczniku = 0; // Zerujemy licznik dla nowego rocznika
 					
 					// Generujemy nagłówki
 					if ( $czy_pierwszy_rocznik ) {
@@ -84,9 +93,14 @@
 					echo '<div class="carousel">';
 				}
 
+				// Podnosimy licznik dla aktualnego wina
+        		$licznik_win_w_roczniku++;
+
 				// --- ZACIĄGNIĘCIE DANYCH KARTY (z poprzedniego kodu) ---
 				$kolor = get_field('kolor_karty');
 				$uklad = get_field('uklad_karty');
+				$ostatni_kolor = $kolor;
+				
 				$icon_color = ($kolor == 'bg-light' || $kolor == 'bg-rose') ? 'dark' : 'light';
 				?>
 				
@@ -134,9 +148,14 @@
 
 			<?php endwhile; 
 			
-			// Na samym końcu zamykamy ostatni kontener z kartami
-			echo '</div>'; 
-			wp_reset_postdata(); 
+			// SPRAWDZENIE DLA OSTATNIEGO ROCZNIKA: 
+			// Gdy pętla się skończy, musimy sprawdzić ten sam warunek dla ostatniej grupy win
+			if ( $licznik_win_w_roczniku % 2 != 0 ) {
+				echo '<div class="flip-wrapper placeholder-card"><div class="flip-card ' . esc_attr($ostatni_kolor) . '"></div></div>';
+			}
+
+			echo '</div>'; // Zamknięcie ostatniego kontenera
+			wp_reset_postdata();
 		endif; 
 		?>
 		</div>
