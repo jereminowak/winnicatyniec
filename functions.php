@@ -29,4 +29,22 @@ function winnica_rejestruj_wina() {
         'menu_icon' => 'dashicons-glass' // Ikonka kieliszka w menu
     ));
 }
+
 add_action( 'init', 'winnica_rejestruj_wina' );
+
+function winnica_rejestruj_oferty() {
+    register_post_type( 'oferty', array(
+        'labels' => array(
+            'name' => 'Oferty plenerowe',
+            'singular_name' => 'Oferta',
+            'add_new' => 'Dodaj ofertę',
+            'add_new_item' => 'Dodaj nową ofertę',
+            'edit_item' => 'Edytuj ofertę'
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'supports' => array( 'title' ),
+        'menu_icon' => 'dashicons-location' // Ikonka pineski
+    ));
+}
+add_action( 'init', 'winnica_rejestruj_oferty' );

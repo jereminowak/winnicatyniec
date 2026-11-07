@@ -950,54 +950,6 @@ img {
   overflow: hidden;
 }
 
-.one{
-  background-image: url("degustacje1.png");
-}
-
-.two{
-  background-image: url("degustacje2.png");
-}
-
-.three{
-  background-image: url("firmowe1.png");
-}
-
-.four{
-  background-image: url("firmowe2.png");
-}
-
-.five{
-  background-image: url("sezonowe1.png");
-}
-
-.six{
-  background-image: url("sezonowe2.png");
-}
-
-.seven{
-  background-image: url("panienski2.png");
-}
-
-.eight{
-  background-image: url("panienski1.png");
-}
-
-.nine{
-  background-image: url("sesje1.png");
-}
-
-.ten{
-  background-image: url("sesje2.png");
-}
-
-.eleven{
-  background-image: url("kamper1.png");
-}
-
-.twelve{
-  background-image: url("kamper2.png");
-}
-
 .section-content .photo img{
   object-fit: cover;
   object-position: center;
